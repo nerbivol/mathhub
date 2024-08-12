@@ -7,23 +7,22 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications." name="description"/>
 <meta content="nerbivol" name="author"/>
-<link href="https://docs.ultralytics.com/guides/region-counting/" rel="canonical"/>
+<link href="https://nerbivol.github.io/mathhub/guides/region-counting/" rel="canonical"/>
 <link href="../workouts-monitoring/" rel="prev"/>
 <link href="../security-alarm-system/" rel="next"/>
 <link href="../../assets/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
-<title>Objects Counting in Regions - Ultralytics YOLO Docs</title>
+<title>Objects Counting in Regions - mathhub</title>
 <link href="../../assets/stylesheets/main.76a95c52.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../stylesheets/style.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<meta content="Objects Counting in Regions" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="object counting, regions, YOLOv8, computer vision, Ultralytics, efficiency, accuracy, automation, real-time, applications, surveillance, monitoring" name="keywords"/><meta content="website" property="og:type"/><meta content="https://docs.ultralytics.com/guides/region-counting" property="og:url"/><meta content="Objects Counting in Regions" property="og:title"/><meta content="Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications." property="og:description"/><meta content="https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://docs.ultralytics.com/guides/region-counting" property="twitter:url"/><meta content="Objects Counting in Regions" property="twitter:title"/><meta content="Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications." property="twitter:description"/><meta content="https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "Objects Counting in Regions", "image": ["https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf"], "datePublished": "2023-12-02 03:20:14 +0500", "dateModified": "2024-07-05 02:25:02 +0200", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications.", "mainEntity": [{"@type": "Question", "name": "What is object counting in specified regions using Ultralytics YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Object counting in specified regions with Ultralytics YOLOv8 involves detecting and tallying the number of objects within defined areas using advanced computer vision. This precise method enhances efficiency and accuracy across various applications like manufacturing, surveillance, and traffic monitoring."}}, {"@type": "Question", "name": "How do I run the object counting script with Ultralytics YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Follow these steps to run object counting in Ultralytics YOLOv8: For more options, visit the Run Region Counting section."}}, {"@type": "Question", "name": "Why should I use Ultralytics YOLOv8 for object counting in regions?", "acceptedAnswer": {"@type": "Answer", "text": "Using Ultralytics YOLOv8 for object counting in regions offers several advantages: Explore deeper benefits in the Advantages section."}}, {"@type": "Question", "name": "Can the defined regions be adjusted during video playback?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Ultralytics YOLOv8, regions can be interactively moved during video playback. Simply click and drag with the left mouse button to reposition the region. This feature enhances flexibility for dynamic environments. Learn more in the tip section for movable regions."}}, {"@type": "Question", "name": "What are some real-world applications of object counting in regions?", "acceptedAnswer": {"@type": "Answer", "text": "Object counting with Ultralytics YOLOv8 can be applied to numerous real-world scenarios: Explore more examples in the Real World Applications section."}}]}</script></head>
+<meta content="Objects Counting in Regions" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="object counting, regions, YOLOv8, computer vision, Ultralytics, efficiency, accuracy, automation, real-time, applications, surveillance, monitoring" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/guides/region-counting" property="og:url"/><meta content="Objects Counting in Regions" property="og:title"/><meta content="Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications." property="og:description"/><meta content="https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/guides/region-counting" property="twitter:url"/><meta content="Objects Counting in Regions" property="twitter:title"/><meta content="Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications." property="twitter:description"/><meta content="https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "Objects Counting in Regions", "image": ["https://github.com/RizwanMunawar/ultralytics/assets/62513924/5ab3bbd7-fd12-4849-928e-5f294d6c3fcf"], "datePublished": "2024-08-12 17:48:07 +0300", "dateModified": "2024-08-12 17:48:07 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Learn how to use Ultralytics YOLOv8 for precise object counting in specified regions, enhancing efficiency across various applications.", "mainEntity": [{"@type": "Question", "name": "What is object counting in specified regions using Ultralytics YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Object counting in specified regions with Ultralytics YOLOv8 involves detecting and tallying the number of objects within defined areas using advanced computer vision. This precise method enhances efficiency and accuracy across various applications like manufacturing, surveillance, and traffic monitoring."}}, {"@type": "Question", "name": "How do I run the object counting script with Ultralytics YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Follow these steps to run object counting in Ultralytics YOLOv8: For more options, visit the Run Region Counting section."}}, {"@type": "Question", "name": "Why should I use Ultralytics YOLOv8 for object counting in regions?", "acceptedAnswer": {"@type": "Answer", "text": "Using Ultralytics YOLOv8 for object counting in regions offers several advantages: Explore deeper benefits in the Advantages section."}}, {"@type": "Question", "name": "Can the defined regions be adjusted during video playback?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with Ultralytics YOLOv8, regions can be interactively moved during video playback. Simply click and drag with the left mouse button to reposition the region. This feature enhances flexibility for dynamic environments. Learn more in the tip section for movable regions."}}, {"@type": "Question", "name": "What are some real-world applications of object counting in regions?", "acceptedAnswer": {"@type": "Answer", "text": "Object counting with Ultralytics YOLOv8 can be applied to numerous real-world scenarios: Explore more examples in the Real World Applications section."}}]}</script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -37,8 +36,8 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Ultralytics YOLO Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Ultralytics YOLO Docs">
-<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+<a aria-label="mathhub" class="md-header__button md-logo" data-md-component="logo" href="../.." title="mathhub">
+<img alt="logo" src="https://github.com/user-attachments/assets/295a3787-696e-4f6b-896d-bca2bba1fb7f"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -47,7 +46,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Ultralytics YOLO Docs
+            mathhub
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -203,26 +202,6 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../integrations/">
-          
-  
-    
-  
-  Integrations
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../reference/cfg/__init__/">
-          
-  
-    
-  
-  Reference
-
-        </a>
-</li>
-<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../help/">
           
   
@@ -244,10 +223,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Ultralytics YOLO Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Ultralytics YOLO Docs">
-<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+<a aria-label="mathhub" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="mathhub">
+<img alt="logo" src="https://github.com/user-attachments/assets/295a3787-696e-4f6b-896d-bca2bba1fb7f"/>
 </a>
-    Ultralytics YOLO Docs
+    mathhub
   </label>
 <div class="md-nav__source">
 <a class="md-source" data-md-component="source" href="https://github.com/nerbivol/mathhub" title="Go to repository">
@@ -557,22 +536,6 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../integrations/">
-<span class="md-ellipsis">
-    Integrations
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../reference/cfg/__init__/">
-<span class="md-ellipsis">
-    Reference
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../../help/">
 <span class="md-ellipsis">
     Help
@@ -867,7 +830,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <!-- mkdocs-git-revision-date-localized-plugin -->
 </small>
 </div>
-<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2023-12-02, Updated 2024-07-05<br/>Authors: <a href="https://github.com/glenn-jocher">glenn-jocher</a> (5), <a href="https://github.com/Burhan-Q">Burhan-Q</a> (1), <a href="https://github.com/RizwanMunawar">RizwanMunawar</a> (1)</div>
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-12, Updated 2024-08-12<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (1)</div>
 <style>
                 .share-button:hover {
                     filter: brightness(1.2);
@@ -878,16 +841,16 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
                 }
             </style>
 <div class="share-buttons">
-<button class="share-button" onclick="window.open('https://twitter.com/intent/tweet?url=https://docs.ultralytics.com/guides/region-counting', 'TwitterShare', 'width=550,height=680,menubar=no,toolbar=no'); return false;" style="background-color: #1da1f2; color: white; padding: 5px 10px; border-radius: 5px; margin-right: 10px; cursor: pointer; display: flex; align-items: center;">
+<button class="share-button" onclick="window.open('https://twitter.com/intent/tweet?url=https://nerbivol.github.io/mathhub/guides/region-counting', 'TwitterShare', 'width=550,height=680,menubar=no,toolbar=no'); return false;" style="background-color: #1da1f2; color: white; padding: 5px 10px; border-radius: 5px; margin-right: 10px; cursor: pointer; display: flex; align-items: center;">
 <i class="fa-brands fa-twitter" style="margin-right: 5px;"></i> Tweet
                 </button>
-<button class="share-button" onclick="window.open('https://www.linkedin.com/shareArticle?url=https://docs.ultralytics.com/guides/region-counting', 'LinkedinShare', 'width=550,height=730,menubar=no,toolbar=no'); return false;" style="background-color: #0077b5; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; display: flex; align-items: center;">
+<button class="share-button" onclick="window.open('https://www.linkedin.com/shareArticle?url=https://nerbivol.github.io/mathhub/guides/region-counting', 'LinkedinShare', 'width=550,height=730,menubar=no,toolbar=no'); return false;" style="background-color: #0077b5; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; display: flex; align-items: center;">
 <i class="fa-brands fa-linkedin" style="margin-right: 5px;"></i> Share
                 </button>
 </div>
 <h2 id="__comments">Comments</h2>
 <!-- Insert Giscus code snippet from https://giscus.app/ here -->
-<script async="" crossorigin="anonymous" data-category="Docs" data-category-id="DIC_kwDOH-jzvc4CWLkL" data-emit-metadata="0" data-input-position="top" data-lang="en" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="ultralytics/ultralytics" data-repo-id="R_kgDOH-jzvQ" data-strict="1" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOMihh6M4Chl8B" data-emit-metadata="0" data-input-position="bottom" data-lang="en" data-mapping="pathname" data-reactions-enabled="1" data-repo="nerbivol/mathhub" data-repo-id="R_kgDOMihh6A" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
 <!-- Synchronize Giscus theme with palette -->
 <script>
@@ -961,7 +924,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
 <div class="md-copyright__highlight">
-<a href="https://ultralytics.com" target="_blank">© 2024 Ultralytics Inc.</a> All rights reserved.
+<a href="https://nerbivol.github.io/mathhub/" target="_blank">© 2024 mathhub.</a> Template from <a href="https://ultralytics.com" target="_blank">Ultralytics Inc.</a> All rights reserved.
     </div>
   
   
@@ -974,7 +937,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <a class="md-social__link" href="https://github.com/ultralytics" rel="noopener" target="_blank" title="github.com">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
-<a class="md-social__link" href="https://www.linkedin.com/company/ultralytics/" rel="noopener" target="_blank" title="www.linkedin.com">
+<a class="md-social__link" href="https://www.linkedin.com/in/serhii-biruk/" rel="noopener" target="_blank" title="www.linkedin.com">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
 </a>
 </div>
