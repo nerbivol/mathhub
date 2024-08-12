@@ -1,0 +1,1531 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Discover YOLOv10, the latest in real-time object detection, eliminating NMS and boosting efficiency. Achieve top performance with a low computational cost." name="description"/>
+<meta content="nerbivol" name="author"/>
+<link href="https://docs.ultralytics.com/models/yolov10/" rel="canonical"/>
+<link href="../yolov9/" rel="prev"/>
+<link href="../sam/" rel="next"/>
+<link href="../../assets/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
+<title>YOLOv10 - Ultralytics YOLO Docs</title>
+<link href="../../assets/stylesheets/main.76a95c52.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../../stylesheets/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<meta content="YOLOv10" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="YOLOv10, real-time object detection, NMS-free, deep learning, Tsinghua University, Ultralytics, machine learning, neural networks, performance optimization" name="keywords"/><meta content="website" property="og:type"/><meta content="https://docs.ultralytics.com/models/yolov10" property="og:url"/><meta content="YOLOv10" property="og:title"/><meta content="Discover YOLOv10, the latest in real-time object detection, eliminating NMS and boosting efficiency. Achieve top performance with a low computational cost." property="og:description"/><meta content="https://github.com/ultralytics/ultralytics/assets/26833433/f9b1bec0-928e-41ce-a205-e12db3c4929a" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://docs.ultralytics.com/models/yolov10" property="twitter:url"/><meta content="YOLOv10" property="twitter:title"/><meta content="Discover YOLOv10, the latest in real-time object detection, eliminating NMS and boosting efficiency. Achieve top performance with a low computational cost." property="twitter:description"/><meta content="https://github.com/ultralytics/ultralytics/assets/26833433/f9b1bec0-928e-41ce-a205-e12db3c4929a" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "YOLOv10", "image": ["https://github.com/ultralytics/ultralytics/assets/26833433/f9b1bec0-928e-41ce-a205-e12db3c4929a"], "datePublished": "2024-05-25 03:16:47 +0500", "dateModified": "2024-07-04 17:16:16 +0200", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Discover YOLOv10, the latest in real-time object detection, eliminating NMS and boosting efficiency. Achieve top performance with a low computational cost.", "mainEntity": [{"@type": "Question", "name": "What is YOLOv10 and how does it differ from previous YOLO versions?", "acceptedAnswer": {"@type": "Answer", "text": "YOLOv10, developed by researchers at Tsinghua University, introduces several key innovations to real-time object detection. It eliminates the need for non-maximum suppression (NMS) by employing consistent dual assignments during training and optimized model components for superior performance with reduced computational overhead. For more details on its architecture and key features, check out the YOLOv10 overview section."}}, {"@type": "Question", "name": "How can I get started with running inference using YOLOv10?", "acceptedAnswer": {"@type": "Answer", "text": "For easy inference, you can use the Ultralytics YOLO Python library or the command line interface (CLI). Below are examples of predicting new images using YOLOv10: For more usage examples, visit our Usage Examples section."}}, {"@type": "Question", "name": "Which model variants does YOLOv10 offer and what are their use cases?", "acceptedAnswer": {"@type": "Answer", "text": "YOLOv10 offers several model variants to cater to different use cases: Each variant is designed for different computational needs and accuracy requirements, making them versatile for a variety of applications. Explore the Model Variants section for more information."}}, {"@type": "Question", "name": "How does the NMS-free approach in YOLOv10 improve performance?", "acceptedAnswer": {"@type": "Answer", "text": "YOLOv10 eliminates the need for non-maximum suppression (NMS) during inference by employing consistent dual assignments for training. This approach reduces inference latency and enhances prediction efficiency. The architecture also includes a one-to-one head for inference, ensuring that each object gets a single best prediction. For a detailed explanation, see the Consistent Dual Assignments for NMS-Free Training section."}}, {"@type": "Question", "name": "Where can I find the export options for YOLOv10 models?", "acceptedAnswer": {"@type": "Answer", "text": "YOLOv10 supports several export formats, including TorchScript, ONNX, OpenVINO, and TensorRT. However, not all export formats provided by Ultralytics are currently supported for YOLOv10 due to its new operations. For details on the supported formats and instructions on exporting, visit the Exporting YOLOv10 section."}}, {"@type": "Question", "name": "What are the performance benchmarks for YOLOv10 models?", "acceptedAnswer": {"@type": "Answer", "text": "YOLOv10 outperforms previous YOLO versions and other state-of-the-art models in both accuracy and efficiency. For example, YOLOv10-S is 1.8x faster than RT-DETR-R18 with a similar AP on the COCO dataset. YOLOv10-B shows 46% less latency and 25% fewer parameters than YOLOv9-C with the same performance. Detailed benchmarks can be found in the Comparisons section."}}]}</script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#yolov10-real-time-end-to-end-object-detection">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Ultralytics YOLO Docs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Ultralytics YOLO Docs">
+<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Ultralytics YOLO Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              YOLOv10
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/nerbivol/mathhub" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    nerbivol/mathhub
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../quickstart/">
+          
+  
+    
+  
+  Quickstart
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../modes/">
+          
+  
+    
+  
+  Modes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tasks/">
+          
+  
+    
+  
+  Tasks
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../">
+          
+  
+    
+  
+  Models
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../datasets/">
+          
+  
+    
+  
+  Datasets
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../solutions/">
+          
+  
+    
+  
+  NEW 🚀 Solutions
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../guides/">
+          
+  
+    
+  
+  Guides
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../integrations/">
+          
+  
+    
+  
+  Integrations
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../reference/cfg/__init__/">
+          
+  
+    
+  
+  Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../help/">
+          
+  
+    
+  
+  Help
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Ultralytics YOLO Docs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Ultralytics YOLO Docs">
+<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+</a>
+    Ultralytics YOLO Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/nerbivol/mathhub" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    nerbivol/mathhub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../quickstart/">
+<span class="md-ellipsis">
+    Quickstart
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../modes/">
+<span class="md-ellipsis">
+    Modes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../tasks/">
+<span class="md-ellipsis">
+    Tasks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    Models
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov3/">
+<span class="md-ellipsis">
+    YOLOv3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov4/">
+<span class="md-ellipsis">
+    YOLOv4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov5/">
+<span class="md-ellipsis">
+    YOLOv5
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov6/">
+<span class="md-ellipsis">
+    YOLOv6
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov7/">
+<span class="md-ellipsis">
+    YOLOv7
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov8/">
+<span class="md-ellipsis">
+    YOLOv8
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolov9/">
+<span class="md-ellipsis">
+    YOLOv9
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    YOLOv10
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    YOLOv10
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture">
+<span class="md-ellipsis">
+      Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-features">
+<span class="md-ellipsis">
+      Key Features
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-variants">
+<span class="md-ellipsis">
+      Model Variants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance">
+<span class="md-ellipsis">
+      Performance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methodology">
+<span class="md-ellipsis">
+      Methodology
+    </span>
+</a>
+<nav aria-label="Methodology" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consistent-dual-assignments-for-nms-free-training">
+<span class="md-ellipsis">
+      Consistent Dual Assignments for NMS-Free Training
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#holistic-efficiency-accuracy-driven-model-design">
+<span class="md-ellipsis">
+      Holistic Efficiency-Accuracy Driven Model Design
+    </span>
+</a>
+<nav aria-label="Holistic Efficiency-Accuracy Driven Model Design" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficiency-enhancements">
+<span class="md-ellipsis">
+      Efficiency Enhancements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accuracy-enhancements">
+<span class="md-ellipsis">
+      Accuracy Enhancements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments-and-results">
+<span class="md-ellipsis">
+      Experiments and Results
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparisons">
+<span class="md-ellipsis">
+      Comparisons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage-examples">
+<span class="md-ellipsis">
+      Usage Examples
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-tasks-and-modes">
+<span class="md-ellipsis">
+      Supported Tasks and Modes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-yolov10">
+<span class="md-ellipsis">
+      Exporting YOLOv10
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#citations-and-acknowledgements">
+<span class="md-ellipsis">
+      Citations and Acknowledgements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faq">
+<span class="md-ellipsis">
+      FAQ
+    </span>
+</a>
+<nav aria-label="FAQ" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-yolov10-and-how-does-it-differ-from-previous-yolo-versions">
+<span class="md-ellipsis">
+      What is YOLOv10 and how does it differ from previous YOLO versions?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-can-i-get-started-with-running-inference-using-yolov10">
+<span class="md-ellipsis">
+      How can I get started with running inference using YOLOv10?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#which-model-variants-does-yolov10-offer-and-what-are-their-use-cases">
+<span class="md-ellipsis">
+      Which model variants does YOLOv10 offer and what are their use cases?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-does-the-nms-free-approach-in-yolov10-improve-performance">
+<span class="md-ellipsis">
+      How does the NMS-free approach in YOLOv10 improve performance?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#where-can-i-find-the-export-options-for-yolov10-models">
+<span class="md-ellipsis">
+      Where can I find the export options for YOLOv10 models?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-the-performance-benchmarks-for-yolov10-models">
+<span class="md-ellipsis">
+      What are the performance benchmarks for YOLOv10 models?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sam/">
+<span class="md-ellipsis">
+    SAM (Segment Anything Model)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../mobile-sam/">
+<span class="md-ellipsis">
+    MobileSAM (Mobile Segment Anything Model)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fast-sam/">
+<span class="md-ellipsis">
+    FastSAM (Fast Segment Anything Model)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolo-nas/">
+<span class="md-ellipsis">
+    YOLO-NAS (Neural Architecture Search)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rtdetr/">
+<span class="md-ellipsis">
+    RT-DETR (Realtime Detection Transformer)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../yolo-world/">
+<span class="md-ellipsis">
+    YOLO-World (Real-Time Open-Vocabulary Object Detection)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../datasets/">
+<span class="md-ellipsis">
+    Datasets
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../solutions/">
+<span class="md-ellipsis">
+    NEW 🚀 Solutions
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../guides/">
+<span class="md-ellipsis">
+    Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../integrations/">
+<span class="md-ellipsis">
+    Integrations
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../reference/cfg/__init__/">
+<span class="md-ellipsis">
+    Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../help/">
+<span class="md-ellipsis">
+    Help
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+<nav aria-label="Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture">
+<span class="md-ellipsis">
+      Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-features">
+<span class="md-ellipsis">
+      Key Features
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#model-variants">
+<span class="md-ellipsis">
+      Model Variants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance">
+<span class="md-ellipsis">
+      Performance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methodology">
+<span class="md-ellipsis">
+      Methodology
+    </span>
+</a>
+<nav aria-label="Methodology" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consistent-dual-assignments-for-nms-free-training">
+<span class="md-ellipsis">
+      Consistent Dual Assignments for NMS-Free Training
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#holistic-efficiency-accuracy-driven-model-design">
+<span class="md-ellipsis">
+      Holistic Efficiency-Accuracy Driven Model Design
+    </span>
+</a>
+<nav aria-label="Holistic Efficiency-Accuracy Driven Model Design" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficiency-enhancements">
+<span class="md-ellipsis">
+      Efficiency Enhancements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accuracy-enhancements">
+<span class="md-ellipsis">
+      Accuracy Enhancements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#experiments-and-results">
+<span class="md-ellipsis">
+      Experiments and Results
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparisons">
+<span class="md-ellipsis">
+      Comparisons
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage-examples">
+<span class="md-ellipsis">
+      Usage Examples
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supported-tasks-and-modes">
+<span class="md-ellipsis">
+      Supported Tasks and Modes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-yolov10">
+<span class="md-ellipsis">
+      Exporting YOLOv10
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+<span class="md-ellipsis">
+      Conclusion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#citations-and-acknowledgements">
+<span class="md-ellipsis">
+      Citations and Acknowledgements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faq">
+<span class="md-ellipsis">
+      FAQ
+    </span>
+</a>
+<nav aria-label="FAQ" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-yolov10-and-how-does-it-differ-from-previous-yolo-versions">
+<span class="md-ellipsis">
+      What is YOLOv10 and how does it differ from previous YOLO versions?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-can-i-get-started-with-running-inference-using-yolov10">
+<span class="md-ellipsis">
+      How can I get started with running inference using YOLOv10?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#which-model-variants-does-yolov10-offer-and-what-are-their-use-cases">
+<span class="md-ellipsis">
+      Which model variants does YOLOv10 offer and what are their use cases?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-does-the-nms-free-approach-in-yolov10-improve-performance">
+<span class="md-ellipsis">
+      How does the NMS-free approach in YOLOv10 improve performance?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#where-can-i-find-the-export-options-for-yolov10-models">
+<span class="md-ellipsis">
+      Where can I find the export options for YOLOv10 models?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-the-performance-benchmarks-for-yolov10-models">
+<span class="md-ellipsis">
+      What are the performance benchmarks for YOLOv10 models?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/nerbivol/mathhub/tree/main/docs/en/models/yolov10.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1 id="yolov10-real-time-end-to-end-object-detection">YOLOv10: Real-Time End-to-End Object Detection</h1>
+<p>YOLOv10, built on the <a href="https://ultralytics.com">Ultralytics</a> <a href="https://pypi.org/project/ultralytics/">Python package</a> by researchers at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, introduces a new approach to real-time object detection, addressing both the post-processing and model architecture deficiencies found in previous YOLO versions. By eliminating non-maximum suppression (NMS) and optimizing various model components, YOLOv10 achieves state-of-the-art performance with significantly reduced computational overhead. Extensive experiments demonstrate its superior accuracy-latency trade-offs across multiple model scales.</p>
+<p><img alt="YOLOv10 consistent dual assignment for NMS-free training" src="https://github.com/ultralytics/ultralytics/assets/26833433/f9b1bec0-928e-41ce-a205-e12db3c4929a"/></p>
+<h2 id="overview">Overview</h2>
+<p>Real-time object detection aims to accurately predict object categories and positions in images with low latency. The YOLO series has been at the forefront of this research due to its balance between performance and efficiency. However, reliance on NMS and architectural inefficiencies have hindered optimal performance. YOLOv10 addresses these issues by introducing consistent dual assignments for NMS-free training and a holistic efficiency-accuracy driven model design strategy.</p>
+<h3 id="architecture">Architecture</h3>
+<p>The architecture of YOLOv10 builds upon the strengths of previous YOLO models while introducing several key innovations. The model architecture consists of the following components:</p>
+<ol>
+<li><strong>Backbone</strong>: Responsible for feature extraction, the backbone in YOLOv10 uses an enhanced version of CSPNet (Cross Stage Partial Network) to improve gradient flow and reduce computational redundancy.</li>
+<li><strong>Neck</strong>: The neck is designed to aggregate features from different scales and passes them to the head. It includes PAN (Path Aggregation Network) layers for effective multiscale feature fusion.</li>
+<li><strong>One-to-Many Head</strong>: Generates multiple predictions per object during training to provide rich supervisory signals and improve learning accuracy.</li>
+<li><strong>One-to-One Head</strong>: Generates a single best prediction per object during inference to eliminate the need for NMS, thereby reducing latency and improving efficiency.</li>
+</ol>
+<h2 id="key-features">Key Features</h2>
+<ol>
+<li><strong>NMS-Free Training</strong>: Utilizes consistent dual assignments to eliminate the need for NMS, reducing inference latency.</li>
+<li><strong>Holistic Model Design</strong>: Comprehensive optimization of various components from both efficiency and accuracy perspectives, including lightweight classification heads, spatial-channel decoupled down sampling, and rank-guided block design.</li>
+<li><strong>Enhanced Model Capabilities</strong>: Incorporates large-kernel convolutions and partial self-attention modules to improve performance without significant computational cost.</li>
+</ol>
+<h2 id="model-variants">Model Variants</h2>
+<p>YOLOv10 comes in various model scales to cater to different application needs:</p>
+<ul>
+<li><strong>YOLOv10-N</strong>: Nano version for extremely resource-constrained environments.</li>
+<li><strong>YOLOv10-S</strong>: Small version balancing speed and accuracy.</li>
+<li><strong>YOLOv10-M</strong>: Medium version for general-purpose use.</li>
+<li><strong>YOLOv10-B</strong>: Balanced version with increased width for higher accuracy.</li>
+<li><strong>YOLOv10-L</strong>: Large version for higher accuracy at the cost of increased computational resources.</li>
+<li><strong>YOLOv10-X</strong>: Extra-large version for maximum accuracy and performance.</li>
+</ul>
+<h2 id="performance">Performance</h2>
+<p>YOLOv10 outperforms previous YOLO versions and other state-of-the-art models in terms of accuracy and efficiency. For example, YOLOv10-S is 1.8x faster than RT-DETR-R18 with similar AP on the COCO dataset, and YOLOv10-B has 46% less latency and 25% fewer parameters than YOLOv9-C with the same performance.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Input Size</th>
+<th>AP<sup>val</sup></th>
+<th>FLOPs (G)</th>
+<th>Latency (ms)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10n.pt">YOLOv10-N</a></td>
+<td>640</td>
+<td>38.5</td>
+<td><strong>6.7</strong></td>
+<td><strong>1.84</strong></td>
+</tr>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10s.pt">YOLOv10-S</a></td>
+<td>640</td>
+<td>46.3</td>
+<td>21.6</td>
+<td>2.49</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10m.pt">YOLOv10-M</a></td>
+<td>640</td>
+<td>51.1</td>
+<td>59.1</td>
+<td>4.74</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10b.pt">YOLOv10-B</a></td>
+<td>640</td>
+<td>52.5</td>
+<td>92.0</td>
+<td>5.74</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10l.pt">YOLOv10-L</a></td>
+<td>640</td>
+<td>53.2</td>
+<td>120.3</td>
+<td>7.28</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10x.pt">YOLOv10-X</a></td>
+<td>640</td>
+<td><strong>54.4</strong></td>
+<td>160.4</td>
+<td>10.70</td>
+</tr>
+</tbody>
+</table>
+<p>Latency measured with TensorRT FP16 on T4 GPU.</p>
+<h2 id="methodology">Methodology</h2>
+<h3 id="consistent-dual-assignments-for-nms-free-training">Consistent Dual Assignments for NMS-Free Training</h3>
+<p>YOLOv10 employs dual label assignments, combining one-to-many and one-to-one strategies during training to ensure rich supervision and efficient end-to-end deployment. The consistent matching metric aligns the supervision between both strategies, enhancing the quality of predictions during inference.</p>
+<h3 id="holistic-efficiency-accuracy-driven-model-design">Holistic Efficiency-Accuracy Driven Model Design</h3>
+<h4 id="efficiency-enhancements">Efficiency Enhancements</h4>
+<ol>
+<li><strong>Lightweight Classification Head</strong>: Reduces the computational overhead of the classification head by using depth-wise separable convolutions.</li>
+<li><strong>Spatial-Channel Decoupled Down sampling</strong>: Decouples spatial reduction and channel modulation to minimize information loss and computational cost.</li>
+<li><strong>Rank-Guided Block Design</strong>: Adapts block design based on intrinsic stage redundancy, ensuring optimal parameter utilization.</li>
+</ol>
+<h4 id="accuracy-enhancements">Accuracy Enhancements</h4>
+<ol>
+<li><strong>Large-Kernel Convolution</strong>: Enlarges the receptive field to enhance feature extraction capability.</li>
+<li><strong>Partial Self-Attention (PSA)</strong>: Incorporates self-attention modules to improve global representation learning with minimal overhead.</li>
+</ol>
+<h2 id="experiments-and-results">Experiments and Results</h2>
+<p>YOLOv10 has been extensively tested on standard benchmarks like COCO, demonstrating superior performance and efficiency. The model achieves state-of-the-art results across different variants, showcasing significant improvements in latency and accuracy compared to previous versions and other contemporary detectors.</p>
+<h2 id="comparisons">Comparisons</h2>
+<p><img alt="YOLOv10 comparison with SOTA object detectors" src="https://github.com/ultralytics/ultralytics/assets/26833433/e0360eb4-3589-4cd1-b362-a8970bceada6"/></p>
+<p>Compared to other state-of-the-art detectors:</p>
+<ul>
+<li>YOLOv10-S / X are 1.8× / 1.3× faster than RT-DETR-R18 / R101 with similar accuracy</li>
+<li>YOLOv10-B has 25% fewer parameters and 46% lower latency than YOLOv9-C at same accuracy</li>
+<li>YOLOv10-L / X outperform YOLOv8-L / X by 0.3 AP / 0.5 AP with 1.8× / 2.3× fewer parameters</li>
+</ul>
+<p>Here is a detailed comparison of YOLOv10 variants with other state-of-the-art models:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Params<br/><sup>(M)</sup></th>
+<th>FLOPs<br/><sup>(G)</sup></th>
+<th>mAP<sup>val<br/>50-95</sup></th>
+<th>Latency<br/><sup>(ms)</sup></th>
+<th>Latency-forward<br/><sup>(ms)</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOLOv6-3.0-N</td>
+<td>4.7</td>
+<td>11.4</td>
+<td>37.0</td>
+<td>2.69</td>
+<td><strong>1.76</strong></td>
+</tr>
+<tr>
+<td>Gold-YOLO-N</td>
+<td>5.6</td>
+<td>12.1</td>
+<td><strong>39.6</strong></td>
+<td>2.92</td>
+<td>1.82</td>
+</tr>
+<tr>
+<td>YOLOv8-N</td>
+<td>3.2</td>
+<td>8.7</td>
+<td>37.3</td>
+<td>6.16</td>
+<td>1.77</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10n.pt">YOLOv10-N</a></strong></td>
+<td><strong>2.3</strong></td>
+<td><strong>6.7</strong></td>
+<td>39.5</td>
+<td><strong>1.84</strong></td>
+<td>1.79</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YOLOv6-3.0-S</td>
+<td>18.5</td>
+<td>45.3</td>
+<td>44.3</td>
+<td>3.42</td>
+<td>2.35</td>
+</tr>
+<tr>
+<td>Gold-YOLO-S</td>
+<td>21.5</td>
+<td>46.0</td>
+<td>45.4</td>
+<td>3.82</td>
+<td>2.73</td>
+</tr>
+<tr>
+<td>YOLOv8-S</td>
+<td>11.2</td>
+<td>28.6</td>
+<td>44.9</td>
+<td>7.07</td>
+<td><strong>2.33</strong></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10s.pt">YOLOv10-S</a></strong></td>
+<td><strong>7.2</strong></td>
+<td><strong>21.6</strong></td>
+<td><strong>46.8</strong></td>
+<td><strong>2.49</strong></td>
+<td>2.39</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RT-DETR-R18</td>
+<td>20.0</td>
+<td>60.0</td>
+<td>46.5</td>
+<td><strong>4.58</strong></td>
+<td><strong>4.49</strong></td>
+</tr>
+<tr>
+<td>YOLOv6-3.0-M</td>
+<td>34.9</td>
+<td>85.8</td>
+<td>49.1</td>
+<td>5.63</td>
+<td>4.56</td>
+</tr>
+<tr>
+<td>Gold-YOLO-M</td>
+<td>41.3</td>
+<td>87.5</td>
+<td>49.8</td>
+<td>6.38</td>
+<td>5.45</td>
+</tr>
+<tr>
+<td>YOLOv8-M</td>
+<td>25.9</td>
+<td>78.9</td>
+<td>50.6</td>
+<td>9.50</td>
+<td>5.09</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10m.pt">YOLOv10-M</a></strong></td>
+<td><strong>15.4</strong></td>
+<td><strong>59.1</strong></td>
+<td><strong>51.3</strong></td>
+<td>4.74</td>
+<td>4.63</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YOLOv6-3.0-L</td>
+<td>59.6</td>
+<td>150.7</td>
+<td>51.8</td>
+<td>9.02</td>
+<td>7.90</td>
+</tr>
+<tr>
+<td>Gold-YOLO-L</td>
+<td>75.1</td>
+<td>151.7</td>
+<td>51.8</td>
+<td>10.65</td>
+<td>9.78</td>
+</tr>
+<tr>
+<td>YOLOv8-L</td>
+<td>43.7</td>
+<td>165.2</td>
+<td>52.9</td>
+<td>12.39</td>
+<td>8.06</td>
+</tr>
+<tr>
+<td>RT-DETR-R50</td>
+<td>42.0</td>
+<td>136.0</td>
+<td>53.1</td>
+<td>9.20</td>
+<td>9.07</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10l.pt">YOLOv10-L</a></strong></td>
+<td><strong>24.4</strong></td>
+<td><strong>120.3</strong></td>
+<td><strong>53.4</strong></td>
+<td><strong>7.28</strong></td>
+<td><strong>7.21</strong></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YOLOv8-X</td>
+<td>68.2</td>
+<td>257.8</td>
+<td>53.9</td>
+<td>16.86</td>
+<td>12.83</td>
+</tr>
+<tr>
+<td>RT-DETR-R101</td>
+<td>76.0</td>
+<td>259.0</td>
+<td>54.3</td>
+<td>13.71</td>
+<td>13.58</td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov10x.pt">YOLOv10-X</a></strong></td>
+<td><strong>29.5</strong></td>
+<td><strong>160.4</strong></td>
+<td><strong>54.4</strong></td>
+<td><strong>10.70</strong></td>
+<td><strong>10.60</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage-examples">Usage Examples</h2>
+<p>For predicting new images with YOLOv10:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># Load a pre-trained YOLOv10n model</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s2">"yolov10n.pt"</span><span class="p">)</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1"># Perform object detection on an image</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="s2">"image.jpg"</span><span class="p">)</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># Display the results</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># Load a COCO-pretrained YOLOv10n model and run inference on the 'bus.jpg' image</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>yolo<span class="w"> </span>detect<span class="w"> </span>predict<span class="w"> </span><span class="nv">model</span><span class="o">=</span>yolov10n.pt<span class="w"> </span><span class="nv">source</span><span class="o">=</span>path/to/bus.jpg
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+<p>For training YOLOv10 on a custom dataset:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># Load YOLOv10n model from scratch</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s2">"yolov10n.yaml"</span><span class="p">)</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1"># Train the model</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">"coco8.yaml"</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">imgsz</span><span class="o">=</span><span class="mi">640</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Build a YOLOv10n model from scratch and train it on the COCO8 example dataset for 100 epochs</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>yolo<span class="w"> </span>train<span class="w"> </span><span class="nv">model</span><span class="o">=</span>yolov10n.yaml<span class="w"> </span><span class="nv">data</span><span class="o">=</span>coco8.yaml<span class="w"> </span><span class="nv">epochs</span><span class="o">=</span><span class="m">100</span><span class="w"> </span><span class="nv">imgsz</span><span class="o">=</span><span class="m">640</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1"># Build a YOLOv10n model from scratch and run inference on the 'bus.jpg' image</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>yolo<span class="w"> </span>predict<span class="w"> </span><span class="nv">model</span><span class="o">=</span>yolov10n.yaml<span class="w"> </span><span class="nv">source</span><span class="o">=</span>path/to/bus.jpg
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="supported-tasks-and-modes">Supported Tasks and Modes</h2>
+<p>The YOLOv10 models series offers a range of models, each optimized for high-performance <a href="../../tasks/detect/">Object Detection</a>. These models cater to varying computational needs and accuracy requirements, making them versatile for a wide array of applications.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Filenames</th>
+<th>Tasks</th>
+<th>Inference</th>
+<th>Validation</th>
+<th>Training</th>
+<th>Export</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YOLOv10</td>
+<td><code>yolov10n.pt</code> <code>yolov10s.pt</code> <code>yolov10m.pt</code> <code>yolov10l.pt</code> <code>yolov10x.pt</code></td>
+<td><a href="../../tasks/detect/">Object Detection</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exporting-yolov10">Exporting YOLOv10</h2>
+<p>Due to the new operations introduced with YOLOv10, not all export formats provided by Ultralytics are currently supported. The following table outlines which formats have been successfully converted using Ultralytics for YOLOv10. Feel free to open a pull request if you're able to <a href="../../help/contributing/">provide a contribution change</a> for adding export support of additional formats for YOLOv10.</p>
+<table>
+<thead>
+<tr>
+<th>Export Format</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../integrations/torchscript/">TorchScript</a></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="../../integrations/onnx/">ONNX</a></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="../../integrations/openvino/">OpenVINO</a></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="../../integrations/tensorrt/">TensorRT</a></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><a href="../../integrations/coreml/">CoreML</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/tf-savedmodel/">TF SavedModel</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/tf-graphdef/">TF GraphDef</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/tflite/">TF Lite</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/edge-tpu/">TF Edge TPU</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/tfjs/">TF.js</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/paddlepaddle/">PaddlePaddle</a></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href="../../integrations/ncnn/">NCNN</a></td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>YOLOv10 sets a new standard in real-time object detection by addressing the shortcomings of previous YOLO versions and incorporating innovative design strategies. Its ability to deliver high accuracy with low computational cost makes it an ideal choice for a wide range of real-world applications.</p>
+<h2 id="citations-and-acknowledgements">Citations and Acknowledgements</h2>
+<p>We would like to acknowledge the YOLOv10 authors from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a> for their extensive research and significant contributions to the <a href="https://ultralytics.com">Ultralytics</a> framework:</p>
+<div class="admonition quote">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">BibTeX</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nc">@article</span><span class="p">{</span><span class="nl">THU-MIGyolov10</span><span class="p">,</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="na">title</span><span class="p">=</span><span class="s">{YOLOv10: Real-Time End-to-End Object Detection}</span><span class="p">,</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="na">author</span><span class="p">=</span><span class="s">{Ao Wang, Hui Chen, Lihao Liu, et al.}</span><span class="p">,</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="na">journal</span><span class="p">=</span><span class="s">{arXiv preprint arXiv:2405.14458}</span><span class="p">,</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="na">year</span><span class="p">=</span><span class="s">{2024}</span><span class="p">,</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="na">institution</span><span class="p">=</span><span class="s">{Tsinghua University}</span><span class="p">,</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="na">license</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{AGPL-3.0}</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</input></div>
+</div>
+<p>For detailed implementation, architectural innovations, and experimental results, please refer to the YOLOv10 <a href="https://arxiv.org/pdf/2405.14458">research paper</a> and <a href="https://github.com/THU-MIG/yolov10">GitHub repository</a> by the Tsinghua University team.</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="what-is-yolov10-and-how-does-it-differ-from-previous-yolo-versions">What is YOLOv10 and how does it differ from previous YOLO versions?</h3>
+<p>YOLOv10, developed by researchers at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, introduces several key innovations to real-time object detection. It eliminates the need for non-maximum suppression (NMS) by employing consistent dual assignments during training and optimized model components for superior performance with reduced computational overhead. For more details on its architecture and key features, check out the <a href="#overview">YOLOv10 overview</a> section.</p>
+<h3 id="how-can-i-get-started-with-running-inference-using-yolov10">How can I get started with running inference using YOLOv10?</h3>
+<p>For easy inference, you can use the Ultralytics YOLO Python library or the command line interface (CLI). Below are examples of predicting new images using YOLOv10:</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label><label for="__tabbed_4_2">CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1"># Load the pre-trained YOLOv10-N model</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s2">"yolov10n.pt"</span><span class="p">)</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="s2">"image.jpg"</span><span class="p">)</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>yolo<span class="w"> </span>detect<span class="w"> </span>predict<span class="w"> </span><span class="nv">model</span><span class="o">=</span>yolov10n.pt<span class="w"> </span><span class="nv">source</span><span class="o">=</span>path/to/image.jpg
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+<p>For more usage examples, visit our <a href="#usage-examples">Usage Examples</a> section.</p>
+<h3 id="which-model-variants-does-yolov10-offer-and-what-are-their-use-cases">Which model variants does YOLOv10 offer and what are their use cases?</h3>
+<p>YOLOv10 offers several model variants to cater to different use cases:</p>
+<ul>
+<li><strong>YOLOv10-N</strong>: Suitable for extremely resource-constrained environments</li>
+<li><strong>YOLOv10-S</strong>: Balances speed and accuracy</li>
+<li><strong>YOLOv10-M</strong>: General-purpose use</li>
+<li><strong>YOLOv10-B</strong>: Higher accuracy with increased width</li>
+<li><strong>YOLOv10-L</strong>: High accuracy at the cost of computational resources</li>
+<li><strong>YOLOv10-X</strong>: Maximum accuracy and performance</li>
+</ul>
+<p>Each variant is designed for different computational needs and accuracy requirements, making them versatile for a variety of applications. Explore the <a href="#model-variants">Model Variants</a> section for more information.</p>
+<h3 id="how-does-the-nms-free-approach-in-yolov10-improve-performance">How does the NMS-free approach in YOLOv10 improve performance?</h3>
+<p>YOLOv10 eliminates the need for non-maximum suppression (NMS) during inference by employing consistent dual assignments for training. This approach reduces inference latency and enhances prediction efficiency. The architecture also includes a one-to-one head for inference, ensuring that each object gets a single best prediction. For a detailed explanation, see the <a href="#consistent-dual-assignments-for-nms-free-training">Consistent Dual Assignments for NMS-Free Training</a> section.</p>
+<h3 id="where-can-i-find-the-export-options-for-yolov10-models">Where can I find the export options for YOLOv10 models?</h3>
+<p>YOLOv10 supports several export formats, including TorchScript, ONNX, OpenVINO, and TensorRT. However, not all export formats provided by Ultralytics are currently supported for YOLOv10 due to its new operations. For details on the supported formats and instructions on exporting, visit the <a href="#exporting-yolov10">Exporting YOLOv10</a> section.</p>
+<h3 id="what-are-the-performance-benchmarks-for-yolov10-models">What are the performance benchmarks for YOLOv10 models?</h3>
+<p>YOLOv10 outperforms previous YOLO versions and other state-of-the-art models in both accuracy and efficiency. For example, YOLOv10-S is 1.8x faster than RT-DETR-R18 with a similar AP on the COCO dataset. YOLOv10-B shows 46% less latency and 25% fewer parameters than YOLOv9-C with the same performance. Detailed benchmarks can be found in the <a href="#comparisons">Comparisons</a> section.</p>
+<!-- taken from
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
+<br/>
+<div class="md-source-file">
+<small>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+</small>
+</div>
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-05-25, Updated 2024-07-04<br/>Authors: <a href="https://github.com/glenn-jocher">glenn-jocher</a> (5), <a href="https://github.com/zhixuwei">zhixuwei</a> (1), <a href="https://github.com/abirami-vina">abirami-vina</a> (1), <a href="https://github.com/RizwanMunawar">RizwanMunawar</a> (3), <a href="https://github.com/Burhan-Q">Burhan-Q</a> (1)</div>
+<style>
+                .share-button:hover {
+                    filter: brightness(1.2);
+                }
+                .share-buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            </style>
+<div class="share-buttons">
+<button class="share-button" onclick="window.open('https://twitter.com/intent/tweet?url=https://docs.ultralytics.com/models/yolov10', 'TwitterShare', 'width=550,height=680,menubar=no,toolbar=no'); return false;" style="background-color: #1da1f2; color: white; padding: 5px 10px; border-radius: 5px; margin-right: 10px; cursor: pointer; display: flex; align-items: center;">
+<i class="fa-brands fa-twitter" style="margin-right: 5px;"></i> Tweet
+                </button>
+<button class="share-button" onclick="window.open('https://www.linkedin.com/shareArticle?url=https://docs.ultralytics.com/models/yolov10', 'LinkedinShare', 'width=550,height=730,menubar=no,toolbar=no'); return false;" style="background-color: #0077b5; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; display: flex; align-items: center;">
+<i class="fa-brands fa-linkedin" style="margin-right: 5px;"></i> Share
+                </button>
+</div>
+<h2 id="__comments">Comments</h2>
+<!-- Insert Giscus code snippet from https://giscus.app/ here -->
+<script async="" crossorigin="anonymous" data-category="Docs" data-category-id="DIC_kwDOH-jzvc4CWLkL" data-emit-metadata="0" data-input-position="top" data-lang="en" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="ultralytics/ultralytics" data-repo-id="R_kgDOH-jzvQ" data-strict="1" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: YOLOv9" class="md-footer__link md-footer__link--prev" href="../yolov9/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                YOLOv9
+              </div>
+</div>
+</a>
+<a aria-label="Next: SAM (Segment Anything Model)" class="md-footer__link md-footer__link--next" href="../sam/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                SAM (Segment Anything Model)
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+<a href="https://ultralytics.com" target="_blank">© 2024 Ultralytics Inc.</a> All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/ultralytics" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/company/ultralytics/" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.prune", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.sections", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+<script src="../../javascript/extra.js"></script>
+</body>
+</html>

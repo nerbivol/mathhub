@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Discover Ultralytics integrations for streamlined ML workflows, dataset management, optimized model training, and robust deployment solutions." name="description"/>
+<meta content="nerbivol" name="author"/>
+<link href="https://docs.ultralytics.com/integrations/" rel="canonical"/>
+<link href="../yolov5/tutorials/clearml_logging_integration/" rel="prev"/>
+<link href="torchscript/" rel="next"/>
+<link href="../assets/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
+<title>Ultralytics Integrations - Ultralytics YOLO Docs</title>
+<link href="../assets/stylesheets/main.76a95c52.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="../stylesheets/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<meta content="Ultralytics Integrations" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Ultralytics, machine learning, ML workflows, dataset management, model training, model deployment, Roboflow, ClearML, Comet ML, DVC, MLFlow, Ultralytics HUB, Neptune, Ray Tune, TensorBoard, Weights &amp; Biases, Amazon SageMaker, Paperspace Gradient, Google Colab, Neural Magic, Gradio, TorchScript, ONNX, OpenVINO, TensorRT, CoreML, TF SavedModel, TF GraphDef, TFLite, TFLite Edge TPU, TF.js, PaddlePaddle, NCNN" name="keywords"/><meta content="website" property="og:type"/><meta content="https://docs.ultralytics.com/integrations" property="og:url"/><meta content="Ultralytics Integrations" property="og:title"/><meta content="Discover Ultralytics integrations for streamlined ML workflows, dataset management, optimized model training, and robust deployment solutions." property="og:description"/><meta content="https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://docs.ultralytics.com/integrations" property="twitter:url"/><meta content="Ultralytics Integrations" property="twitter:title"/><meta content="Discover Ultralytics integrations for streamlined ML workflows, dataset management, optimized model training, and robust deployment solutions." property="twitter:description"/><meta content="https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "Ultralytics Integrations", "image": ["https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png"], "datePublished": "2023-11-12 02:49:37 +0100", "dateModified": "2024-07-18 03:42:24 +0530", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Discover Ultralytics integrations for streamlined ML workflows, dataset management, optimized model training, and robust deployment solutions.", "mainEntity": [{"@type": "Question", "name": "What is Ultralytics HUB, and how does it streamline the ML workflow?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics HUB is a cloud-based platform designed to make machine learning (ML) workflows for Ultralytics models seamless and efficient. By using this tool, you can easily upload datasets, train models, perform real-time tracking, and deploy YOLOv8 models without needing extensive coding skills. You can explore the key features on the Ultralytics HUB page and get started quickly with our Quickstart guide."}}, {"@type": "Question", "name": "How do I integrate Ultralytics YOLO models with Roboflow for dataset management?", "acceptedAnswer": {"@type": "Answer", "text": "Integrating Ultralytics YOLO models with Roboflow enhances dataset management by providing robust tools for annotation, preprocessing, and augmentation. To get started, follow the steps on the Roboflow integration page. This partnership ensures efficient dataset handling, which is crucial for developing accurate and robust YOLO models."}}, {"@type": "Question", "name": "Can I track the performance of my Ultralytics models using MLFlow?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, you can. Integrating MLFlow with Ultralytics models allows you to track experiments, improve reproducibility, and streamline the entire ML lifecycle. Detailed instructions for setting up this integration can be found on the MLFlow integration page. This integration is particularly useful for monitoring model metrics and managing the ML workflow efficiently."}}, {"@type": "Question", "name": "What are the benefits of using Neural Magic for YOLOv8 model optimization?", "acceptedAnswer": {"@type": "Answer", "text": "Neural Magic optimizes YOLOv8 models by leveraging techniques like Quantization Aware Training (QAT) and pruning, resulting in highly efficient, smaller models that perform better on resource-limited hardware. Check out the Neural Magic integration page to learn how to implement these optimizations for superior performance and leaner models. This is especially beneficial for deployment on edge devices."}}, {"@type": "Question", "name": "How do I deploy Ultralytics YOLO models with Gradio for interactive demos?", "acceptedAnswer": {"@type": "Answer", "text": "To deploy Ultralytics YOLO models with Gradio for interactive object detection demos, you can follow the steps outlined on the Gradio integration page. Gradio allows you to create easy-to-use web interfaces for real-time model inference, making it an excellent tool for showcasing your YOLO model's capabilities in a user-friendly format suitable for both developers and end-users. By addressing these common questions, we aim to improve user experience and provide valuable insights into the powerful capabilities of Ultralytics products. Incorporating these FAQs will not only enhance the documentation but also drive more organic traffic to the Ultralytics website."}}]}</script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ultralytics-integrations">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Ultralytics YOLO Docs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Ultralytics YOLO Docs">
+<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Ultralytics YOLO Docs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Ultralytics Integrations
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/nerbivol/mathhub" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    nerbivol/mathhub
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../quickstart/">
+          
+  
+    
+  
+  Quickstart
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../modes/">
+          
+  
+    
+  
+  Modes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../tasks/">
+          
+  
+    
+  
+  Tasks
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../models/">
+          
+  
+    
+  
+  Models
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../datasets/">
+          
+  
+    
+  
+  Datasets
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../solutions/">
+          
+  
+    
+  
+  NEW 🚀 Solutions
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../guides/">
+          
+  
+    
+  
+  Guides
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+    
+  
+  Integrations
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../reference/cfg/__init__/">
+          
+  
+    
+  
+  Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../help/">
+          
+  
+    
+  
+  Help
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Ultralytics YOLO Docs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Ultralytics YOLO Docs">
+<img alt="logo" src="https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics_Logotype_Reverse.svg"/>
+</a>
+    Ultralytics YOLO Docs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/nerbivol/mathhub" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    nerbivol/mathhub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Home
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../quickstart/">
+<span class="md-ellipsis">
+    Quickstart
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../modes/">
+<span class="md-ellipsis">
+    Modes
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../tasks/">
+<span class="md-ellipsis">
+    Tasks
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../models/">
+<span class="md-ellipsis">
+    Models
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../datasets/">
+<span class="md-ellipsis">
+    Datasets
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../solutions/">
+<span class="md-ellipsis">
+    NEW 🚀 Solutions
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../guides/">
+<span class="md-ellipsis">
+    Guides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Integrations
+  </span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_9" id="__nav_9_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="torchscript/">
+<span class="md-ellipsis">
+    TorchScript
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="onnx/">
+<span class="md-ellipsis">
+    ONNX
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="openvino/">
+<span class="md-ellipsis">
+    OpenVINO
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tensorrt/">
+<span class="md-ellipsis">
+    TensorRT
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="coreml/">
+<span class="md-ellipsis">
+    CoreML
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tf-savedmodel/">
+<span class="md-ellipsis">
+    TF SavedModel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tf-graphdef/">
+<span class="md-ellipsis">
+    TF GraphDef
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tflite/">
+<span class="md-ellipsis">
+    TFLite
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="edge-tpu/">
+<span class="md-ellipsis">
+    TFLite Edge TPU
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tfjs/">
+<span class="md-ellipsis">
+    TF.js
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="paddlepaddle/">
+<span class="md-ellipsis">
+    PaddlePaddle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="ncnn/">
+<span class="md-ellipsis">
+    NCNN
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="comet/">
+<span class="md-ellipsis">
+    Comet ML
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="ray-tune/">
+<span class="md-ellipsis">
+    Ray Tune
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="roboflow/">
+<span class="md-ellipsis">
+    Roboflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="mlflow/">
+<span class="md-ellipsis">
+    MLflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="clearml/">
+<span class="md-ellipsis">
+    ClearML
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="dvc/">
+<span class="md-ellipsis">
+    DVC
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="weights-biases/">
+<span class="md-ellipsis">
+    Weights &amp; Biases
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="neural-magic/">
+<span class="md-ellipsis">
+    Neural Magic
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="gradio/">
+<span class="md-ellipsis">
+    Gradio
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="tensorboard/">
+<span class="md-ellipsis">
+    TensorBoard
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="amazon-sagemaker/">
+<span class="md-ellipsis">
+    Amazon SageMaker
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="paperspace/">
+<span class="md-ellipsis">
+    Paperspace Gradient
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="google-colab/">
+<span class="md-ellipsis">
+    Google Colab
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="kaggle/">
+<span class="md-ellipsis">
+    Kaggle
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../reference/cfg/__init__/">
+<span class="md-ellipsis">
+    Reference
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../help/">
+<span class="md-ellipsis">
+    Help
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datasets-integrations">
+<span class="md-ellipsis">
+      Datasets Integrations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#training-integrations">
+<span class="md-ellipsis">
+      Training Integrations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deployment-integrations">
+<span class="md-ellipsis">
+      Deployment Integrations
+    </span>
+</a>
+<nav aria-label="Deployment Integrations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#export-formats">
+<span class="md-ellipsis">
+      Export Formats
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contribute-to-our-integrations">
+<span class="md-ellipsis">
+      Contribute to Our Integrations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#faq">
+<span class="md-ellipsis">
+      FAQ
+    </span>
+</a>
+<nav aria-label="FAQ" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-ultralytics-hub-and-how-does-it-streamline-the-ml-workflow">
+<span class="md-ellipsis">
+      What is Ultralytics HUB, and how does it streamline the ML workflow?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-do-i-integrate-ultralytics-yolo-models-with-roboflow-for-dataset-management">
+<span class="md-ellipsis">
+      How do I integrate Ultralytics YOLO models with Roboflow for dataset management?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#can-i-track-the-performance-of-my-ultralytics-models-using-mlflow">
+<span class="md-ellipsis">
+      Can I track the performance of my Ultralytics models using MLFlow?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-are-the-benefits-of-using-neural-magic-for-yolov8-model-optimization">
+<span class="md-ellipsis">
+      What are the benefits of using Neural Magic for YOLOv8 model optimization?
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-do-i-deploy-ultralytics-yolo-models-with-gradio-for-interactive-demos">
+<span class="md-ellipsis">
+      How do I deploy Ultralytics YOLO models with Gradio for interactive demos?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/nerbivol/mathhub/tree/main/docs/en/integrations/index.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1 id="ultralytics-integrations">Ultralytics Integrations</h1>
+<p>Welcome to the Ultralytics Integrations page! This page provides an overview of our partnerships with various tools and platforms, designed to streamline your machine learning workflows, enhance dataset management, simplify model training, and facilitate efficient deployment.</p>
+<p><img alt="Ultralytics YOLO ecosystem and integrations" src="https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png" width="1024"/></p>
+<p align="center">
+<br/>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="405" loading="lazy" src="https://www.youtube.com/embed/ZzUSXQkLbNw" title="YouTube video player" width="720">
+</iframe>
+<br/>
+<strong>Watch:</strong> Ultralytics YOLOv8 Deployment and Integrations
+</p>
+<h2 id="datasets-integrations">Datasets Integrations</h2>
+<ul>
+<li><a href="roboflow/">Roboflow</a>: Facilitate seamless dataset management for Ultralytics models, offering robust annotation, preprocessing, and augmentation capabilities.</li>
+</ul>
+<h2 id="training-integrations">Training Integrations</h2>
+<ul>
+<li>
+<p><a href="clearml/">ClearML</a>: Automate your Ultralytics ML workflows, monitor experiments, and foster team collaboration.</p>
+</li>
+<li>
+<p><a href="comet/">Comet ML</a>: Enhance your model development with Ultralytics by tracking, comparing, and optimizing your machine learning experiments.</p>
+</li>
+<li>
+<p><a href="dvc/">DVC</a>: Implement version control for your Ultralytics machine learning projects, synchronizing data, code, and models effectively.</p>
+</li>
+<li>
+<p><a href="mlflow/">MLFlow</a>: Streamline the entire ML lifecycle of Ultralytics models, from experimentation and reproducibility to deployment.</p>
+</li>
+<li>
+<p><a href="https://hub.ultralytics.com">Ultralytics HUB</a>: Access and contribute to a community of pre-trained Ultralytics models.</p>
+</li>
+<li>
+<p><a href="https://neptune.ai/">Neptune</a>: Maintain a comprehensive log of your ML experiments with Ultralytics in this metadata store designed for MLOps.</p>
+</li>
+<li>
+<p><a href="ray-tune/">Ray Tune</a>: Optimize the hyperparameters of your Ultralytics models at any scale.</p>
+</li>
+<li>
+<p><a href="tensorboard/">TensorBoard</a>: Visualize your Ultralytics ML workflows, monitor model metrics, and foster team collaboration.</p>
+</li>
+<li>
+<p><a href="weights-biases/">Weights &amp; Biases (W&amp;B)</a>: Monitor experiments, visualize metrics, and foster reproducibility and collaboration on Ultralytics projects.</p>
+</li>
+<li>
+<p><a href="amazon-sagemaker/">Amazon SageMaker</a>: Leverage Amazon SageMaker to efficiently build, train, and deploy Ultralytics models, providing an all-in-one platform for the ML lifecycle.</p>
+</li>
+<li>
+<p><a href="paperspace/">Paperspace Gradient</a>: Paperspace Gradient simplifies working on YOLOv8 projects by providing easy-to-use cloud tools for training, testing, and deploying your models quickly.</p>
+</li>
+<li>
+<p><a href="google-colab/">Google Colab</a>: Use Google Colab to train and evaluate Ultralytics models in a cloud-based environment that supports collaboration and sharing.</p>
+</li>
+<li>
+<p><a href="kaggle/">Kaggle</a>: Explore how you can use Kaggle to train and evaluate Ultralytics models in a cloud-based environment with pre-installed libraries, GPU support, and a vibrant community for collaboration and sharing.</p>
+</li>
+</ul>
+<h2 id="deployment-integrations">Deployment Integrations</h2>
+<ul>
+<li>
+<p><a href="neural-magic/">Neural Magic</a>: Leverage Quantization Aware Training (QAT) and pruning techniques to optimize Ultralytics models for superior performance and leaner size.</p>
+</li>
+<li>
+<p><a href="gradio/">Gradio</a> 🚀 NEW: Deploy Ultralytics models with Gradio for real-time, interactive object detection demos.</p>
+</li>
+<li>
+<p><a href="torchscript/">TorchScript</a>: Developed as part of the <a href="https://pytorch.org/">PyTorch</a> framework, TorchScript enables efficient execution and deployment of machine learning models in various production environments without the need for Python dependencies.</p>
+</li>
+<li>
+<p><a href="onnx/">ONNX</a>: An open-source format created by <a href="https://www.microsoft.com">Microsoft</a> for facilitating the transfer of AI models between various frameworks, enhancing the versatility and deployment flexibility of Ultralytics models.</p>
+</li>
+<li>
+<p><a href="openvino/">OpenVINO</a>: Intel's toolkit for optimizing and deploying computer vision models efficiently across various Intel CPU and GPU platforms.</p>
+</li>
+<li>
+<p><a href="tensorrt/">TensorRT</a>: Developed by <a href="https://www.nvidia.com/">NVIDIA</a>, this high-performance deep learning inference framework and model format optimizes AI models for accelerated speed and efficiency on NVIDIA GPUs, ensuring streamlined deployment.</p>
+</li>
+<li>
+<p><a href="coreml/">CoreML</a>: CoreML, developed by <a href="https://www.apple.com/">Apple</a>, is a framework designed for efficiently integrating machine learning models into applications across iOS, macOS, watchOS, and tvOS, using Apple's hardware for effective and secure model deployment.</p>
+</li>
+<li>
+<p><a href="tf-savedmodel/">TF SavedModel</a>: Developed by <a href="https://www.google.com">Google</a>, TF SavedModel is a universal serialization format for TensorFlow models, enabling easy sharing and deployment across a wide range of platforms, from servers to edge devices.</p>
+</li>
+<li>
+<p><a href="tf-graphdef/">TF GraphDef</a>: Developed by <a href="https://www.google.com">Google</a>, GraphDef is TensorFlow's format for representing computation graphs, enabling optimized execution of machine learning models across diverse hardware.</p>
+</li>
+<li>
+<p><a href="tflite/">TFLite</a>: Developed by <a href="https://www.google.com">Google</a>, TFLite is a lightweight framework for deploying machine learning models on mobile and edge devices, ensuring fast, efficient inference with minimal memory footprint.</p>
+</li>
+<li>
+<p><a href="edge-tpu/">TFLite Edge TPU</a>: Developed by <a href="https://www.google.com">Google</a> for optimizing TensorFlow Lite models on Edge TPUs, this model format ensures high-speed, efficient edge computing.</p>
+</li>
+<li>
+<p><a href="tfjs/">TF.js</a>: Developed by <a href="https://www.google.com">Google</a> to facilitate machine learning in browsers and Node.js, TF.js allows JavaScript-based deployment of ML models.</p>
+</li>
+<li>
+<p><a href="paddlepaddle/">PaddlePaddle</a>: An open-source deep learning platform by <a href="https://www.baidu.com/">Baidu</a>, PaddlePaddle enables the efficient deployment of AI models and focuses on the scalability of industrial applications.</p>
+</li>
+<li>
+<p><a href="ncnn/">NCNN</a>: Developed by <a href="http://www.tencent.com/">Tencent</a>, NCNN is an efficient neural network inference framework tailored for mobile devices. It enables direct deployment of AI models into apps, optimizing performance across various mobile platforms.</p>
+</li>
+</ul>
+<h3 id="export-formats">Export Formats</h3>
+<p>We also support a variety of model export formats for deployment in different environments. Here are the available formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th><code>format</code> Argument</th>
+<th>Model</th>
+<th>Metadata</th>
+<th>Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pytorch.org/">PyTorch</a></td>
+<td>-</td>
+<td><code>yolov8n.pt</code></td>
+<td>✅</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="torchscript/">TorchScript</a></td>
+<td><code>torchscript</code></td>
+<td><code>yolov8n.torchscript</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>optimize</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="onnx/">ONNX</a></td>
+<td><code>onnx</code></td>
+<td><code>yolov8n.onnx</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>dynamic</code>, <code>simplify</code>, <code>opset</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="openvino/">OpenVINO</a></td>
+<td><code>openvino</code></td>
+<td><code>yolov8n_openvino_model/</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="tensorrt/">TensorRT</a></td>
+<td><code>engine</code></td>
+<td><code>yolov8n.engine</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>dynamic</code>, <code>simplify</code>, <code>workspace</code>, <code>int8</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="coreml/">CoreML</a></td>
+<td><code>coreml</code></td>
+<td><code>yolov8n.mlpackage</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>nms</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="tf-savedmodel/">TF SavedModel</a></td>
+<td><code>saved_model</code></td>
+<td><code>yolov8n_saved_model/</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>keras</code>, <code>int8</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="tf-graphdef/">TF GraphDef</a></td>
+<td><code>pb</code></td>
+<td><code>yolov8n.pb</code></td>
+<td>❌</td>
+<td><code>imgsz</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="tflite/">TF Lite</a></td>
+<td><code>tflite</code></td>
+<td><code>yolov8n.tflite</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="edge-tpu/">TF Edge TPU</a></td>
+<td><code>edgetpu</code></td>
+<td><code>yolov8n_edgetpu.tflite</code></td>
+<td>✅</td>
+<td><code>imgsz</code></td>
+</tr>
+<tr>
+<td><a href="tfjs/">TF.js</a></td>
+<td><code>tfjs</code></td>
+<td><code>yolov8n_web_model/</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="paddlepaddle/">PaddlePaddle</a></td>
+<td><code>paddle</code></td>
+<td><code>yolov8n_paddle_model/</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>batch</code></td>
+</tr>
+<tr>
+<td><a href="ncnn/">NCNN</a></td>
+<td><code>ncnn</code></td>
+<td><code>yolov8n_ncnn_model/</code></td>
+<td>✅</td>
+<td><code>imgsz</code>, <code>half</code>, <code>batch</code></td>
+</tr>
+</tbody>
+</table>
+<p>Explore the links to learn more about each integration and how to get the most out of them with Ultralytics. See full <code>export</code> details in the <a href="../modes/export/">Export</a> page.</p>
+<h2 id="contribute-to-our-integrations">Contribute to Our Integrations</h2>
+<p>We're always excited to see how the community integrates Ultralytics YOLO with other technologies, tools, and platforms! If you have successfully integrated YOLO with a new system or have valuable insights to share, consider contributing to our Integrations Docs.</p>
+<p>By writing a guide or tutorial, you can help expand our documentation and provide real-world examples that benefit the community. It's an excellent way to contribute to the growing ecosystem around Ultralytics YOLO.</p>
+<p>To contribute, please check out our <a href="../help/contributing/">Contributing Guide</a> for instructions on how to submit a Pull Request (PR) 🛠️. We eagerly await your contributions!</p>
+<p>Let's collaborate to make the Ultralytics YOLO ecosystem more expansive and feature-rich 🙏!</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="what-is-ultralytics-hub-and-how-does-it-streamline-the-ml-workflow">What is Ultralytics HUB, and how does it streamline the ML workflow?</h3>
+<p>Ultralytics HUB is a cloud-based platform designed to make machine learning (ML) workflows for Ultralytics models seamless and efficient. By using this tool, you can easily upload datasets, train models, perform real-time tracking, and deploy YOLOv8 models without needing extensive coding skills. You can explore the key features on the <a href="https://hub.ultralytics.com">Ultralytics HUB</a> page and get started quickly with our <a href="https://docs.ultralytics.com/hub/quickstart/">Quickstart</a> guide.</p>
+<h3 id="how-do-i-integrate-ultralytics-yolo-models-with-roboflow-for-dataset-management">How do I integrate Ultralytics YOLO models with Roboflow for dataset management?</h3>
+<p>Integrating Ultralytics YOLO models with Roboflow enhances dataset management by providing robust tools for annotation, preprocessing, and augmentation. To get started, follow the steps on the <a href="roboflow/">Roboflow</a> integration page. This partnership ensures efficient dataset handling, which is crucial for developing accurate and robust YOLO models.</p>
+<h3 id="can-i-track-the-performance-of-my-ultralytics-models-using-mlflow">Can I track the performance of my Ultralytics models using MLFlow?</h3>
+<p>Yes, you can. Integrating MLFlow with Ultralytics models allows you to track experiments, improve reproducibility, and streamline the entire ML lifecycle. Detailed instructions for setting up this integration can be found on the <a href="mlflow/">MLFlow</a> integration page. This integration is particularly useful for monitoring model metrics and managing the ML workflow efficiently.</p>
+<h3 id="what-are-the-benefits-of-using-neural-magic-for-yolov8-model-optimization">What are the benefits of using Neural Magic for YOLOv8 model optimization?</h3>
+<p>Neural Magic optimizes YOLOv8 models by leveraging techniques like Quantization Aware Training (QAT) and pruning, resulting in highly efficient, smaller models that perform better on resource-limited hardware. Check out the <a href="neural-magic/">Neural Magic</a> integration page to learn how to implement these optimizations for superior performance and leaner models. This is especially beneficial for deployment on edge devices.</p>
+<h3 id="how-do-i-deploy-ultralytics-yolo-models-with-gradio-for-interactive-demos">How do I deploy Ultralytics YOLO models with Gradio for interactive demos?</h3>
+<p>To deploy Ultralytics YOLO models with Gradio for interactive object detection demos, you can follow the steps outlined on the <a href="gradio/">Gradio</a> integration page. Gradio allows you to create easy-to-use web interfaces for real-time model inference, making it an excellent tool for showcasing your YOLO model's capabilities in a user-friendly format suitable for both developers and end-users.</p>
+<p>By addressing these common questions, we aim to improve user experience and provide valuable insights into the powerful capabilities of Ultralytics products. Incorporating these FAQs will not only enhance the documentation but also drive more organic traffic to the Ultralytics website.</p>
+<!-- taken from
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
+<br/>
+<div class="md-source-file">
+<small>
+<!-- mkdocs-git-revision-date-localized-plugin -->
+</small>
+</div>
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2023-11-12, Updated 2024-07-18<br/>Authors: <a href="https://github.com/abirami-vina">abirami-vina</a> (15), <a href="https://github.com/glenn-jocher">glenn-jocher</a> (16), <a href="https://github.com/Burhan-Q">Burhan-Q</a> (5), <a href="https://github.com/RizwanMunawar">RizwanMunawar</a> (1)</div>
+<style>
+                .share-button:hover {
+                    filter: brightness(1.2);
+                }
+                .share-buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            </style>
+<div class="share-buttons">
+<button class="share-button" onclick="window.open('https://twitter.com/intent/tweet?url=https://docs.ultralytics.com/integrations', 'TwitterShare', 'width=550,height=680,menubar=no,toolbar=no'); return false;" style="background-color: #1da1f2; color: white; padding: 5px 10px; border-radius: 5px; margin-right: 10px; cursor: pointer; display: flex; align-items: center;">
+<i class="fa-brands fa-twitter" style="margin-right: 5px;"></i> Tweet
+                </button>
+<button class="share-button" onclick="window.open('https://www.linkedin.com/shareArticle?url=https://docs.ultralytics.com/integrations', 'LinkedinShare', 'width=550,height=730,menubar=no,toolbar=no'); return false;" style="background-color: #0077b5; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; display: flex; align-items: center;">
+<i class="fa-brands fa-linkedin" style="margin-right: 5px;"></i> Share
+                </button>
+</div>
+<h2 id="__comments">Comments</h2>
+<!-- Insert Giscus code snippet from https://giscus.app/ here -->
+<script async="" crossorigin="anonymous" data-category="Docs" data-category-id="DIC_kwDOH-jzvc4CWLkL" data-emit-metadata="0" data-input-position="top" data-lang="en" data-loading="lazy" data-mapping="pathname" data-reactions-enabled="1" data-repo="ultralytics/ultralytics" data-repo-id="R_kgDOH-jzvQ" data-strict="1" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+</script>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Clearml Logging" class="md-footer__link md-footer__link--prev" href="../yolov5/tutorials/clearml_logging_integration/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Clearml Logging
+              </div>
+</div>
+</a>
+<a aria-label="Next: TorchScript" class="md-footer__link md-footer__link--next" href="torchscript/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                TorchScript
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+<a href="https://ultralytics.com" target="_blank">© 2024 Ultralytics Inc.</a> All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/ultralytics" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.linkedin.com/company/ultralytics/" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.prune", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.sections", "content.tabs.link"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+<script src="../javascript/extra.js"></script>
+</body>
+</html>
