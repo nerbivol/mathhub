@@ -21,7 +21,7 @@ theme:
   name: material
   language: en
   custom_dir: docs/overrides/
-  logo: https://github.com/user-attachments/assets/295a3787-696e-4f6b-896d-bca2bba1fb7f
+  logo: https://github.com/user-attachments/assets/81234f31-01f4-44c3-964a-629fc4f38e84
   favicon: assets/favicon.ico
   icon:
     repo: fontawesome/brands/github
@@ -386,9 +386,7 @@ plugins:
         predict.md: modes/predict.md
         python.md: usage/python.md
         quick-start.md: quickstart.md
-        app.md: hub/app/index.md
         sdk.md: index.md
-        hub/inference_api.md: hub/inference-api.md
         usage/hyperparameter_tuning.md: integrations/ray-tune.md
         reference/base_pred.md: reference/engine/predictor.md
         reference/base_trainer.md: reference/engine/trainer.md
