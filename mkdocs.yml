@@ -21,7 +21,7 @@ theme:
   name: material
   language: en
   custom_dir: docs/overrides/
-  logo: https://github.com/user-attachments/assets/81234f31-01f4-44c3-964a-629fc4f38e84
+  logo: https://raw.githubusercontent.com/nerbivol/mathhub/bdf0894e4e6d82ad972da9ec094df4f779cc7436/docs/overrides/assets/logo_inver1-cropped.svg
   favicon: assets/favicon.ico
   icon:
     repo: fontawesome/brands/github
