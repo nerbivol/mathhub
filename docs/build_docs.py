@@ -153,7 +153,7 @@ def update_markdown_files(md_filepath: Path):
 
 def update_docs_html():
     """Updates titles, edit links, head sections, and converts plaintext links in HTML documentation."""
-    update_page_title(SITE / "404.html", new_title="Ultralytics Docs - Not Found")
+    update_page_title(SITE / "404.html", new_title="mathhub - not found")
 
     # Update edit links
     update_subdir_edit_links(
