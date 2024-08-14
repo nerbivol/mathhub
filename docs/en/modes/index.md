@@ -1,82 +1,89 @@
 ---
 comments: true
-description: Discover the diverse modes of Ultralytics YOLOv8, including training, validation, prediction, export, tracking, and benchmarking. Maximize model performance and efficiency.
-keywords: Ultralytics, YOLOv8, machine learning, model training, validation, prediction, export, tracking, benchmarking, object detection
+description: Множини. Операції над множинами. Відображення множин. Потужність множин
+keywords: Множини
 ---
 
-# Ultralytics YOLOv8 Modes
+# Множини. Операції над множинами. Відображення множин. Потужність множин
 
-<img width="1024" src="https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png" alt="Ultralytics YOLO ecosystem and integrations">
 
-## Introduction
+### Множина. Приклади множин
 
-Ultralytics YOLOv8 is not just another object detection model; it's a versatile framework designed to cover the entire lifecycle of machine learning models—from data ingestion and model training to validation, deployment, and real-world tracking. Each mode serves a specific purpose and is engineered to offer you the flexibility and efficiency required for different tasks and use-cases.
+Множина – це фундаментальне поняття не лише математики, а й усього навколишнього світу. Візьміть прямо зараз у руку будь-який предмет. Ось вам і множина, що складається з одного елемента.
 
-<p align="center">
-  <br>
-  <iframe loading="lazy" width="720" height="405" src="https://www.youtube.com/embed/j8uQc0qB91s?si=dhnGKgqvs7nPgeaM"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-  <br>
-  <strong>Watch:</strong> Ultralytics Modes Tutorial: Train, Validate, Predict, Export & Benchmark.
-</p>
+У широкому сенсі, **множина – це сукупність об'єктів (елементів), які розглядаються як єдине ціле** (за тими чи іншими ознаками, критеріями або обставинами). Причому, це не лише матеріальні об'єкти, але й букви, цифри, теореми, думки, емоції тощо.
 
-### Modes at a Glance
+Зазвичай множини позначаються великими латинськими літерами \( A, B, C, \dots, X, Y, Z \) (як варіант, з підрядковими індексами: \( A_1, A_2, B_1 \) тощо), а його елементи записуються у фігурних дужках, наприклад:
 
-Understanding the different **modes** that Ultralytics YOLOv8 supports is critical to getting the most out of your models:
+- \( A = \{а, б, в, г, \dots, ь, ю, я\} \) – множина букв українського алфавіту;
+- \( N = \{1, 2, 3, 4, \dots\} \) – множина натуральних чисел;
 
-- **Train** mode: Fine-tune your model on custom or preloaded datasets.
-- **Val** mode: A post-training checkpoint to validate model performance.
-- **Predict** mode: Unleash the predictive power of your model on real-world data.
-- **Export** mode: Make your model deployment-ready in various formats.
-- **Track** mode: Extend your object detection model into real-time tracking applications.
-- **Benchmark** mode: Analyze the speed and accuracy of your model in diverse deployment environments.
+Ну що ж, настав час трохи познайомитись:
 
-This comprehensive guide aims to give you an overview and practical insights into each mode, helping you harness the full potential of YOLOv8.
+- \( S_1 = \{\text{Анна, Ваня, Таня, Петя, Юля, Галя}\} \) – множина студентів в 1-му ряду.
 
-## [Train](train.md)
+...І я радий бачити ваші серйозні та зосереджені обличчя =)
 
-Train mode is used for training a YOLOv8 model on a custom dataset. In this mode, the model is trained using the specified dataset and hyperparameters. The training process involves optimizing the model's parameters so that it can accurately predict the classes and locations of objects in an image.
+Множини \( A \) і \( S_1 \) є **скінченними** (складаються з кінцевого числа елементів), а множина \( N \) – це приклад **нескінченної множини**. Крім того, в теорії і на практиці розглядається так зване **порожня множина**:
 
-[Train Examples](train.md){ .md-button }
+- \( \emptyset \) – множина, в якій немає жодного елемента.
 
-## [Val](val.md)
+Приклад вам добре відомий – множина \( S_1 \) на іспиті частково буває порожньою =)
 
-Val mode is used for validating a YOLOv8 model after it has been trained. In this mode, the model is evaluated on a validation set to measure its accuracy and generalization performance. This mode can be used to tune the hyperparameters of the model to improve its performance.
+Належність елемента множині записується знаком \( \in \), наприклад:
 
-[Val Examples](val.md){ .md-button }
+- \( є \in A \) – буква "є" належить множині букв українського алфавіту;
+- \( \epsilon \notin A \) – буква "епсілон" не належить множині букв українського алфавіту;
+- \( 5 \in N \) – число 5 належить множині натуральних чисел;
+- \( 5{,}5 \notin N \) – а ось число 5,5 – уже ні;
 
-## [Predict](predict.md)
+Вольдемар \( \notin S_1 \) – Вольдемар не сидить у першому ряду (і тим більше, не належить множині \( A \) або \( N \) =) )
 
-Predict mode is used for making predictions using a trained YOLOv8 model on new images or videos. In this mode, the model is loaded from a checkpoint file, and the user can provide images or videos to perform inference. The model predicts the classes and locations of objects in the input images or videos.
+В абстрактній і не дуже алгебрі елементи множини позначаються маленькими латинськими літерами \( a, b, c, \dots, x, y, z \), і, відповідно, факт належності оформляється в наступному стилі:
 
-[Predict Examples](predict.md){ .md-button }
+- \( x \in X \) – елемент \( x \) належить множині \( X \).
 
-## [Export](export.md)
+Перераховані вище множини записані **прямим переліком** елементів, але це не єдиний спосіб завдання множини: набагато зручніше визначати її за допомогою певної ознаки (властивості), який притаманний усім її елементам. Наприклад:
 
-Export mode is used for exporting a YOLOv8 model to a format that can be used for deployment. In this mode, the model is converted to a format that can be used by other software applications or hardware devices. This mode is useful when deploying the model to production environments.
+- \( N^* = \{n \in N \mid n < 100\} \) – множина всіх натуральних чисел, менших за сто.
 
-[Export Examples](export.md){ .md-button }
+!!! info
 
-## [Track](track.md)
+    Вертикальна риска \( \mid \) виражає словосполучення "які", "таких, що". Досить часто замість неї використовується двокрапка: \( N^* = \{n \in N : n < 100\} \).
+    Формально читається як: "Множина \( N^* \) – це сукупність таких елементів, які належать до множини \( N \) натуральних чисел, таких, що \( n < 100 \)". 
 
-Track mode is used for tracking objects in real-time using a YOLOv8 model. In this mode, the model is loaded from a checkpoint file, and the user can provide a live video stream to perform real-time object tracking. This mode is useful for applications such as surveillance systems or self-driving cars.
+Молодці!
 
-[Track Examples](track.md){ .md-button }
+Цю множину можна записати й прямим перерахуванням:
 
-## [Benchmark](benchmark.md)
+\( N^* = \{1, 2, 3, \dots, 97, 98, 99\} \)
 
-Benchmark mode is used to profile the speed and accuracy of various export formats for YOLOv8. The benchmarks provide information on the size of the exported format, its `mAP50-95` metrics (for object detection, segmentation and pose) or `accuracy_top5` metrics (for classification), and the inference time in milliseconds per image across various export formats like ONNX, OpenVINO, TensorRT and others. This information can help users choose the optimal export format for their specific use case based on their requirements for speed and accuracy.
+Ще приклади:
 
-[Benchmark Examples](benchmark.md){ .md-button }
+\( S_1 = \{студенти\ займають\ місця\ в\ 1-му\ ряду\} \) – і якщо студентів в 1-му ряду достатньо багато, то такий запис набагато зручніше, ніж їх пряме перерахування.
 
-## FAQ
+\( O = \{x \mid 0 \leq x \leq 1\} \) – множина чисел, що належать відрізку \([0, 1]\). Зверніть увагу, що тут мається на увазі множина **дійсних** чисел (про них пізніше), які неможливо перерахувати через кому вже не можливо.
 
-### How do I train a custom object detection model with Ultralytics YOLOv8?
+Слід зазначити, що елементи множини не обов'язково повинні бути "однорідними" чи логічно пов'язаними. Візьміть великий пакет і почніть випадково складати в нього різні предмети. У цьому немає ніякої закономірності, але, тим не менш, йдеться про множину предметів. Інакше кажучи, множина – це і є відокремлений "пакет", у якому "волею долі" виявилася деяка сукупність об'єктів.
 
-Training a custom object detection model with Ultralytics YOLOv8 involves using the train mode. You need a dataset formatted in YOLO format, containing images and corresponding annotation files. Use the following command to start the training process:
+### Підмножини
+
+Практично все зрозуміло вже з самої назви: множина \( G' \) є підмножиною множини \( A \), якщо кожен елемент множини \( G' \) належить множині \( A \). Інакше кажучи, множина \( G' \) міститься у множині \( A \):
+
+\[ G' \subseteq A \]
+
+Знак \( \subseteq \) називають знаком **включення**.
+
+Повернімося до прикладу, в якому \( A \) – це множина букв українського алфавіту. Позначимо через \( G \) – множину його голосних букв. Тоді:
+
+\[ G \subseteq A \]
+
+Також можна виділити підмножину приголосних букв і взагалі – довільну підмножину, що складається з будь-якого числа (але не порожньої) взятих кириличних букв. І, отже, будь-яка буква кирилиці є підмножиною множини \( A \).
+
+Взаємовідношення між множинами зручно зображувати за допомогою умовної геометричної схеми, яка називається **кругами Ейлера**.
+
+Нехай \( S \) – множина студентів у 1-му ряду, \( U \) – множина студентів групи, \( U = S \cup S' \), де \( S' \) – інші студенти університету. Тоді відношення включення \( S \subseteq U \) можна зобразити наступним чином:
+
 
 !!! Example
 
@@ -95,106 +102,3 @@ Training a custom object detection model with Ultralytics YOLOv8 involves using 
         ```bash
         yolo train data=path/to/dataset.yaml epochs=100 imgsz=640
         ```
-
-For more detailed instructions, you can refer to the [Ultralytics Train Guide](../modes/train.md).
-
-### What metrics does Ultralytics YOLOv8 use to validate the model's performance?
-
-Ultralytics YOLOv8 uses various metrics during the validation process to assess model performance. These include:
-
-- **mAP (mean Average Precision)**: This evaluates the accuracy of object detection.
-- **IOU (Intersection over Union)**: Measures the overlap between predicted and ground truth bounding boxes.
-- **Precision and Recall**: Precision measures the ratio of true positive detections to the total detected positives, while recall measures the ratio of true positive detections to the total actual positives.
-
-You can run the following command to start the validation:
-
-!!! Example
-
-    === "Python"
-
-        ```python
-        from ultralytics import YOLO
-
-        # Validate the model
-        model = YOLO("yolov8n.pt")
-        model.val(data="path/to/validation.yaml")
-        ```
-
-    === "CLI"
-
-        ```bash
-        yolo val data=path/to/validation.yaml
-        ```
-
-Refer to the [Validation Guide](../modes/val.md) for further details.
-
-### How can I export my YOLOv8 model for deployment?
-
-Ultralytics YOLOv8 offers export functionality to convert your trained model into various deployment formats such as ONNX, TensorRT, CoreML, and more. Use the following example to export your model:
-
-!!! Example
-
-    === "Python"
-
-        ```python
-        from ultralytics import YOLO
-
-        # Export the model
-        model = YOLO("yolov8n.pt")
-        model.export(format="onnx")
-        ```
-
-    === "CLI"
-
-        ```bash
-        yolo export model=yolov8n.pt format=onnx
-        ```
-
-Detailed steps for each export format can be found in the [Export Guide](../modes/export.md).
-
-### What is the purpose of the benchmark mode in Ultralytics YOLOv8?
-
-Benchmark mode in Ultralytics YOLOv8 is used to analyze the speed and accuracy of various export formats such as ONNX, TensorRT, and OpenVINO. It provides metrics like model size, `mAP50-95` for object detection, and inference time across different hardware setups, helping you choose the most suitable format for your deployment needs.
-
-!!! Example
-
-    === "Python"
-
-        ```python
-        from ultralytics.utils.benchmarks import benchmark
-
-        # Benchmark on GPU
-        benchmark(model="yolov8n.pt", data="coco8.yaml", imgsz=640, half=False, device=0)
-        ```
-
-    === "CLI"
-
-        ```bash
-        yolo benchmark model=yolov8n.pt data='coco8.yaml' imgsz=640 half=False device=0
-        ```
-
-For more details, refer to the [Benchmark Guide](../modes/benchmark.md).
-
-### How can I perform real-time object tracking using Ultralytics YOLOv8?
-
-Real-time object tracking can be achieved using the track mode in Ultralytics YOLOv8. This mode extends object detection capabilities to track objects across video frames or live feeds. Use the following example to enable tracking:
-
-!!! Example
-
-    === "Python"
-
-        ```python
-        from ultralytics import YOLO
-
-        # Track objects in a video
-        model = YOLO("yolov8n.pt")
-        model.track(source="path/to/video.mp4")
-        ```
-
-    === "CLI"
-
-        ```bash
-        yolo track source=path/to/video.mp4
-        ```
-
-For in-depth instructions, visit the [Track Guide](../modes/track.md).
