@@ -8,11 +8,9 @@
 <meta content="Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition." name="description"/>
 <meta content="nerbivol" name="author"/>
 <link href="https://nerbivol.github.io/mathhub/tasks/detect/" rel="canonical"/>
-<link href="../" rel="prev"/>
-<link href="../segment/" rel="next"/>
 <link href="../../assets/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
-<title>Detect - mathhub</title>
+<title>Object Detection - mathhub</title>
 <link href="../../assets/stylesheets/main.76a95c52.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +20,7 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<meta content="Detect" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="object detection, YOLOv8, pretrained models, training, validation, prediction, export, machine learning, computer vision" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/tasks/detect" property="og:url"/><meta content="Detect" property="og:title"/><meta content="Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition." property="og:description"/><meta content="https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/tasks/detect" property="twitter:url"/><meta content="Detect" property="twitter:title"/><meta content="Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition." property="twitter:description"/><meta content="https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "Detect", "image": ["https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png"], "datePublished": "2024-08-12 17:48:07 +0300", "dateModified": "2024-08-12 17:48:07 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition.", "mainEntity": [{"@type": "Question", "name": "How do I train a YOLOv8 model on my custom dataset?", "acceptedAnswer": {"@type": "Answer", "text": "Training a YOLOv8 model on a custom dataset involves a few steps: For detailed configuration options, visit the Configuration page."}}, {"@type": "Question", "name": "What pretrained models are available in YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 offers various pretrained models for object detection, segmentation, and pose estimation. These models are pretrained on the COCO dataset or ImageNet for classification tasks. Here are some of the available models: For a detailed list and performance metrics, refer to the Models section."}}, {"@type": "Question", "name": "How can I validate the accuracy of my trained YOLOv8 model?", "acceptedAnswer": {"@type": "Answer", "text": "To validate the accuracy of your trained YOLOv8 model, you can use the .val() method in Python or the yolo detect val command in CLI. This will provide metrics like mAP50-95, mAP50, and more. For more validation details, visit the Val page."}}, {"@type": "Question", "name": "What formats can I export a YOLOv8 model to?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 allows exporting models to various formats such as ONNX, TensorRT, CoreML, and more to ensure compatibility across different platforms and devices. Check the full list of supported formats and instructions on the Export page."}}, {"@type": "Question", "name": "Why should I use Ultralytics YOLOv8 for object detection?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 is designed to offer state-of-the-art performance for object detection, segmentation, and pose estimation. Here are some key advantages: Explore our Blog for use cases and success stories showcasing YOLOv8 in action."}}]}</script></head>
+<meta content="Object Detection" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="object detection, YOLOv8, pretrained models, training, validation, prediction, export, machine learning, computer vision" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/tasks/detect" property="og:url"/><meta content="Object Detection" property="og:title"/><meta content="Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition." property="og:description"/><meta content="https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png" property="og:image"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/tasks/detect" property="twitter:url"/><meta content="Object Detection" property="twitter:title"/><meta content="Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition." property="twitter:description"/><meta content="https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png" property="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": ["Article", "FAQPage"], "headline": "Object Detection", "image": ["https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png"], "datePublished": "2024-08-12 17:48:07 +0300", "dateModified": "2024-08-12 17:48:07 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "Learn about object detection with YOLOv8. Explore pretrained models, training, validation, prediction, and export details for efficient object recognition.", "mainEntity": [{"@type": "Question", "name": "How do I train a YOLOv8 model on my custom dataset?", "acceptedAnswer": {"@type": "Answer", "text": "Training a YOLOv8 model on a custom dataset involves a few steps: For detailed configuration options, visit the Configuration page."}}, {"@type": "Question", "name": "What pretrained models are available in YOLOv8?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 offers various pretrained models for object detection, segmentation, and pose estimation. These models are pretrained on the COCO dataset or ImageNet for classification tasks. Here are some of the available models: For a detailed list and performance metrics, refer to the Models section."}}, {"@type": "Question", "name": "How can I validate the accuracy of my trained YOLOv8 model?", "acceptedAnswer": {"@type": "Answer", "text": "To validate the accuracy of your trained YOLOv8 model, you can use the .val() method in Python or the yolo detect val command in CLI. This will provide metrics like mAP50-95, mAP50, and more. For more validation details, visit the Val page."}}, {"@type": "Question", "name": "What formats can I export a YOLOv8 model to?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 allows exporting models to various formats such as ONNX, TensorRT, CoreML, and more to ensure compatibility across different platforms and devices. Check the full list of supported formats and instructions on the Export page."}}, {"@type": "Question", "name": "Why should I use Ultralytics YOLOv8 for object detection?", "acceptedAnswer": {"@type": "Answer", "text": "Ultralytics YOLOv8 is designed to offer state-of-the-art performance for object detection, segmentation, and pose estimation. Here are some key advantages: Explore our Blog for use cases and success stories showcasing YOLOv8 in action."}}]}</script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -52,7 +50,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Detect
+              Object Detection
             
           </span>
 </div>
@@ -127,87 +125,27 @@
   
     
   
-  Home
+  Головна
 
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../quickstart/">
+<a class="md-tabs__link" href="../../differential/first_order/">
           
   
     
   
-  Quickstart
+  Диференціальні рівняння
 
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../modes/">
+<a class="md-tabs__link" href="../../algebra/sets/">
           
   
     
   
-  Modes
-
-        </a>
-</li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../">
-          
-  
-    
-  
-  Tasks
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../models/">
-          
-  
-    
-  
-  Models
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../datasets/">
-          
-  
-    
-  
-  Datasets
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../solutions/">
-          
-  
-    
-  
-  NEW 🚀 Solutions
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../guides/">
-          
-  
-    
-  
-  Guides
-
-        </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../help/">
-          
-  
-    
-  
-  Help
+  Вища алгебра
 
         </a>
 </li>
@@ -242,226 +180,23 @@
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
 <a class="md-nav__link" href="../..">
 <span class="md-ellipsis">
-    Home
+    Головна
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../quickstart/">
+<a class="md-nav__link" href="../../differential/first_order/">
 <span class="md-ellipsis">
-    Quickstart
+    Диференціальні рівняння
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
 </li>
 <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../modes/">
+<a class="md-nav__link" href="../../algebra/sets/">
 <span class="md-ellipsis">
-    Modes
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../">
-<span class="md-ellipsis">
-    Tasks
-  </span>
-</a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            Tasks
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Detect
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    Detect
-  </span>
-</a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#models">
-<span class="md-ellipsis">
-      Models
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#train">
-<span class="md-ellipsis">
-      Train
-    </span>
-</a>
-<nav aria-label="Train" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dataset-format">
-<span class="md-ellipsis">
-      Dataset format
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#val">
-<span class="md-ellipsis">
-      Val
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#predict">
-<span class="md-ellipsis">
-      Predict
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#export">
-<span class="md-ellipsis">
-      Export
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#faq">
-<span class="md-ellipsis">
-      FAQ
-    </span>
-</a>
-<nav aria-label="FAQ" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-do-i-train-a-yolov8-model-on-my-custom-dataset">
-<span class="md-ellipsis">
-      How do I train a YOLOv8 model on my custom dataset?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-pretrained-models-are-available-in-yolov8">
-<span class="md-ellipsis">
-      What pretrained models are available in YOLOv8?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#how-can-i-validate-the-accuracy-of-my-trained-yolov8-model">
-<span class="md-ellipsis">
-      How can I validate the accuracy of my trained YOLOv8 model?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-formats-can-i-export-a-yolov8-model-to">
-<span class="md-ellipsis">
-      What formats can I export a YOLOv8 model to?
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#why-should-i-use-ultralytics-yolov8-for-object-detection">
-<span class="md-ellipsis">
-      Why should I use Ultralytics YOLOv8 for object detection?
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../segment/">
-<span class="md-ellipsis">
-    Segment
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../classify/">
-<span class="md-ellipsis">
-    Classify
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../pose/">
-<span class="md-ellipsis">
-    Pose
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../obb/">
-<span class="md-ellipsis">
-    OBB
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../models/">
-<span class="md-ellipsis">
-    Models
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../datasets/">
-<span class="md-ellipsis">
-    Datasets
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../solutions/">
-<span class="md-ellipsis">
-    NEW 🚀 Solutions
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../guides/">
-<span class="md-ellipsis">
-    Guides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</a>
-</li>
-<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-<a class="md-nav__link" href="../../help/">
-<span class="md-ellipsis">
-    Help
+    Вища алгебра
   </span>
 <span class="md-nav__icon md-icon"></span>
 </a>
@@ -665,7 +400,7 @@
 <li><strong>Speed</strong> averaged over COCO val images using an <a href="https://aws.amazon.com/ec2/instance-types/p4/">Amazon EC2 P4d</a> instance. <br/>Reproduce by <code>yolo val detect data=coco8.yaml batch=1 device=0|cpu</code></li>
 </ul>
 <h2 id="train">Train</h2>
-<p>Train YOLOv8n on the COCO8 dataset for 100 epochs at image size 640. For a full list of available arguments see the <a href="../../usage/cfg/">Configuration</a> page.</p>
+<p>Train YOLOv8n on the COCO8 dataset for 100 epochs at image size 640. For a full list of available arguments see the <a href="../usage/cfg.md">Configuration</a> page.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">CLI</label></div>
@@ -697,7 +432,7 @@
 </input></input></div>
 </div>
 <h3 id="dataset-format">Dataset format</h3>
-<p>YOLO detection dataset format can be found in detail in the <a href="../../datasets/detect/">Dataset Guide</a>. To convert your existing dataset from other formats (like COCO etc.) to YOLO format, please use <a href="https://github.com/ultralytics/JSON2YOLO">JSON2YOLO</a> tool by Ultralytics.</p>
+<p>YOLO detection dataset format can be found in detail in the <a href="../datasets/detect/index.md">Dataset Guide</a>. To convert your existing dataset from other formats (like COCO etc.) to YOLO format, please use <a href="https://github.com/ultralytics/JSON2YOLO">JSON2YOLO</a> tool by Ultralytics.</p>
 <h2 id="val">Val</h2>
 <p>Validate trained YOLOv8n model accuracy on the COCO8 dataset. No argument need to passed as the <code>model</code> retains its training <code>data</code> and arguments as model attributes.</p>
 <div class="admonition example">
@@ -757,7 +492,7 @@
 <p>Export a YOLOv8n model to a different format like ONNX, CoreML, etc.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label><label for="__tabbed_4_2">CLI</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label><label for="__tabbed_4_2">CLI</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
@@ -776,7 +511,7 @@
 </code></pre></div>
 </div>
 </div>
-</input></input></div>
+</div>
 </div>
 <p>Available YOLOv8 export formats are in the table below. You can export to any format using the <code>format</code> argument, i.e. <code>format='onnx'</code> or <code>format='engine'</code>. You can predict or validate directly on exported models, i.e. <code>yolo predict model=yolov8n.onnx</code>. Usage examples are shown for your model after export completes.</p>
 <table>
@@ -798,84 +533,84 @@
 <td>-</td>
 </tr>
 <tr>
-<td><a href="../../integrations/torchscript/">TorchScript</a></td>
+<td><a href="../integrations/torchscript.md">TorchScript</a></td>
 <td><code>torchscript</code></td>
 <td><code>yolov8n.torchscript</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>optimize</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/onnx/">ONNX</a></td>
+<td><a href="../integrations/onnx.md">ONNX</a></td>
 <td><code>onnx</code></td>
 <td><code>yolov8n.onnx</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>dynamic</code>, <code>simplify</code>, <code>opset</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/openvino/">OpenVINO</a></td>
+<td><a href="../integrations/openvino.md">OpenVINO</a></td>
 <td><code>openvino</code></td>
 <td><code>yolov8n_openvino_model/</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/tensorrt/">TensorRT</a></td>
+<td><a href="../integrations/tensorrt.md">TensorRT</a></td>
 <td><code>engine</code></td>
 <td><code>yolov8n.engine</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>dynamic</code>, <code>simplify</code>, <code>workspace</code>, <code>int8</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/coreml/">CoreML</a></td>
+<td><a href="../integrations/coreml.md">CoreML</a></td>
 <td><code>coreml</code></td>
 <td><code>yolov8n.mlpackage</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>nms</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/tf-savedmodel/">TF SavedModel</a></td>
+<td><a href="../integrations/tf-savedmodel.md">TF SavedModel</a></td>
 <td><code>saved_model</code></td>
 <td><code>yolov8n_saved_model/</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>keras</code>, <code>int8</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/tf-graphdef/">TF GraphDef</a></td>
+<td><a href="../integrations/tf-graphdef.md">TF GraphDef</a></td>
 <td><code>pb</code></td>
 <td><code>yolov8n.pb</code></td>
 <td>❌</td>
 <td><code>imgsz</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/tflite/">TF Lite</a></td>
+<td><a href="../integrations/tflite.md">TF Lite</a></td>
 <td><code>tflite</code></td>
 <td><code>yolov8n.tflite</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/edge-tpu/">TF Edge TPU</a></td>
+<td><a href="../integrations/edge-tpu.md">TF Edge TPU</a></td>
 <td><code>edgetpu</code></td>
 <td><code>yolov8n_edgetpu.tflite</code></td>
 <td>✅</td>
 <td><code>imgsz</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/tfjs/">TF.js</a></td>
+<td><a href="../integrations/tfjs.md">TF.js</a></td>
 <td><code>tfjs</code></td>
 <td><code>yolov8n_web_model/</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>half</code>, <code>int8</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/paddlepaddle/">PaddlePaddle</a></td>
+<td><a href="../integrations/paddlepaddle.md">PaddlePaddle</a></td>
 <td><code>paddle</code></td>
 <td><code>yolov8n_paddle_model/</code></td>
 <td>✅</td>
 <td><code>imgsz</code>, <code>batch</code></td>
 </tr>
 <tr>
-<td><a href="../../integrations/ncnn/">NCNN</a></td>
+<td><a href="../integrations/ncnn.md">NCNN</a></td>
 <td><code>ncnn</code></td>
 <td><code>yolov8n_ncnn_model/</code></td>
 <td>✅</td>
@@ -888,7 +623,7 @@
 <h3 id="how-do-i-train-a-yolov8-model-on-my-custom-dataset">How do I train a YOLOv8 model on my custom dataset?</h3>
 <p>Training a YOLOv8 model on a custom dataset involves a few steps:</p>
 <ol>
-<li><strong>Prepare the Dataset</strong>: Ensure your dataset is in the YOLO format. For guidance, refer to our <a href="../../datasets/detect/">Dataset Guide</a>.</li>
+<li><strong>Prepare the Dataset</strong>: Ensure your dataset is in the YOLO format. For guidance, refer to our <a href="../datasets/detect/index.md">Dataset Guide</a>.</li>
 <li><strong>Load the Model</strong>: Use the Ultralytics YOLO library to load a pre-trained model or create a new model from a YAML file.</li>
 <li><strong>Train the Model</strong>: Execute the <code>train</code> method in Python or the <code>yolo detect train</code> command in CLI.</li>
 </ol>
@@ -913,7 +648,7 @@
 </div>
 </div>
 </div>
-<p>For detailed configuration options, visit the <a href="../../usage/cfg/">Configuration</a> page.</p>
+<p>For detailed configuration options, visit the <a href="../usage/cfg.md">Configuration</a> page.</p>
 <h3 id="what-pretrained-models-are-available-in-yolov8">What pretrained models are available in YOLOv8?</h3>
 <p>Ultralytics YOLOv8 offers various pretrained models for object detection, segmentation, and pose estimation. These models are pretrained on the COCO dataset or ImageNet for classification tasks. Here are some of the available models:</p>
 <ul>
@@ -1052,40 +787,12 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 </button>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Ultralytics YOLOv8 Tasks" class="md-footer__link md-footer__link--prev" href="../">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                Previous
-              </span>
-<div class="md-ellipsis">
-                Ultralytics YOLOv8 Tasks
-              </div>
-</div>
-</a>
-<a aria-label="Next: Segment" class="md-footer__link md-footer__link--next" href="../segment/">
-<div class="md-footer__title">
-<span class="md-footer__direction">
-                Next
-              </span>
-<div class="md-ellipsis">
-                Segment
-              </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
 <div class="md-copyright__highlight">
-<a href="https://nerbivol.github.io/mathhub/" target="_blank">© 2024 mathhub.</a> Template from <a href="https://ultralytics.com" target="_blank">Ultralytics Inc.</a> All rights reserved.
-    </div>
+<a href="https://nerbivol.github.io/mathhub/" target="_blank">© 2024 Mathhub Inc.</a>
+</div>
   
   
     Made with
@@ -1094,7 +801,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
     </a>
 </div>
 <div class="md-social">
-<a class="md-social__link" href="https://github.com/ultralytics" rel="noopener" target="_blank" title="github.com">
+<a class="md-social__link" href="https://github.com/nerbivol" rel="noopener" target="_blank" title="github.com">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </a>
 <a class="md-social__link" href="https://www.linkedin.com/in/serhii-biruk/" rel="noopener" target="_blank" title="www.linkedin.com">
@@ -1112,5 +819,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.code.annotate", "content.code.copy", "content.tooltips", "search.highlight", "search.share", "search.suggest", "toc.follow", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.prune", "navigation.footer", "navigation.tracking", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.sections", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
 <script src="../../javascript/extra.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
