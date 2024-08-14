@@ -128,19 +128,13 @@ validation:
 
 # Primary navigation ---------------------------------------------------------------------------------------------------
 nav:
-  - Home:
-      - Home: index.md
-      - Languages:
-          - 🇬🇧&nbsp English: https://nerbivol.github.io/mathhub/
-          - 🇺🇦&nbsp Українська: https://nerbivol.github.io/mathhub/ua/
+  - Головна:
+      - Початок: index.md
+      - Мови:
+          - 🇺🇦&nbsp Українська: https://nerbivol.github.io/mathhub/
+          - 🇬🇧&nbsp English: https://nerbivol.github.io/mathhub/en/
   - Елементи вищої алгебри:
-      - modes/index.md
-      - Train: modes/train.md
-      - Val: modes/val.md
-      - Predict: modes/predict.md
-      - Export: modes/export.md
-      - Track: modes/track.md
-      - Benchmark: modes/benchmark.md
+      - Множини. Операції над множинами. Відображення множин. Потужність множин: algebra/sets.md
   - Tasks:
       - tasks/index.md
       - Detect: tasks/detect.md
