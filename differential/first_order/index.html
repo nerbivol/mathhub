@@ -22,12 +22,15 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<meta content="Диференціальні рівняння першого порядку" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Диференціальні рівняння" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="og:url"/><meta content="Диференціальні рівняння першого порядку" property="og:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="og:description"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="twitter:url"/><meta content="Диференціальні рівняння першого порядку" property="twitter:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443", "image": [], "datePublished": "", "dateModified": "", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443. \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u0438 \u0440\u043e\u0437\u0432\u2019\u044f\u0437\u0430\u043d\u043d\u044f. \u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0440\u043e\u0437\u0434\u0456\u043b\u044c\u043d\u0438\u043c\u0438 \u0437\u043c\u0456\u043d\u043d\u0438\u043c\u0438"}</script></head>
+<meta content="Диференціальні рівняння першого порядку" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Диференціальні рівняння" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="og:url"/><meta content="Диференціальні рівняння першого порядку" property="og:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="og:description"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="twitter:url"/><meta content="Диференціальні рівняння першого порядку" property="twitter:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443", "image": [], "datePublished": "2024-08-15 00:29:20 +0300", "dateModified": "2024-08-17 21:51:42 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443. \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u0438 \u0440\u043e\u0437\u0432\u2019\u044f\u0437\u0430\u043d\u043d\u044f. \u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0440\u043e\u0437\u0434\u0456\u043b\u044c\u043d\u0438\u043c\u0438 \u0437\u043c\u0456\u043d\u043d\u0438\u043c\u0438"}</script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -235,13 +238,11 @@
 <a class="md-content__button md-icon" href="https://github.com/nerbivol/mathhub/tree/main/docs/en/differential/first_order.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1>Диференціальні рівняння першого порядку</h1>
-<p><strong>Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними</strong></p>
-<p>Диференціальні рівняння (ДУ). Ці два слова зазвичай лякають середньостатистичну людину. Диференціальні рівняння здаються чимось надскладним і важким для освоєння навіть багатьом студентам. Ууууу... диференціальні рівняння, як би мені все це пережити?!</p>
+<h1 id="_1">Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними**</h1>
+<p>Диференціальні рівняння (ДР). Ці два слова зазвичай лякають середньостатистичну людину. Диференціальні рівняння здаються чимось надскладним і важким для освоєння навіть багатьом студентам. Ууууу... диференціальні рівняння, як би мені все це пережити?!</p>
 <p>Таке враження і такий настрій кардинально неправильні, тому що насправді ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ – ЦЕ ПРОСТО І НАВІТЬ ЗАХОПЛЮЮЧЕ. Що потрібно знати і вміти, щоб навчитися розв'язувати диференціальні рівняння? Для успішного вивчення диференціальних рівнянь ви повинні добре вміти інтегрувати і диференціювати. Чим краще вивчені теми "Похідна функції однієї змінної" і "Неозначений інтеграл", тим легше буде розібратися з диференціальними рівняннями. Скажу більше, якщо у вас більш-менш пристойні навички інтегрування, то тема практично освоєна! Чим більше інтегралів різних типів ви вмієте розв'язувати – тим краще. Чому? Доведеться багато інтегрувати. І диференціювати. Також настійно рекомендую навчитися знаходити похідну від функції, заданої неявно.</p>
 <p>У 95% випадків у контрольних роботах зустрічаються 3 типи диференціальних рівнянь першого порядку: рівняння з роздільними змінними, які ми розглянемо на цьому уроці; однорідні рівняння і лінійні неоднорідні рівняння. Тим, хто починає вивчати диференціальні рівняння, раджу ознайомитися з уроками саме в такій послідовності, причому після вивчення перших двох статей не завадить закріпити свої навички на додатковому практикумі – рівняннях, що зводяться до однорідних.</p>
 <p>Є ще більш рідкісні типи диференціальних рівнянь: рівняння у повних диференціалах, рівняння Бернуллі та деякі інші. Найважливішими з двох останніх видів є рівняння у повних диференціалах, оскільки крім цього ДУ я розглядаю новий матеріал – часткове інтегрування.</p>
-<p>Якщо у вас в запасі всього день-два, то для супершвидкої підготовки є блиц-курс у форматі pdf.</p>
 <p>Отже, орієнтири розставлено – поїхали:</p>
 <p>Спочатку згадаємо «звичайні» рівняння. Вони містять змінні та числа. Простіший приклад: <span class="arithmatex">\( x + 2 = 6 \)</span>. Що означає розв'язати таке рівняння? Це означає знайти множину всіх чисел, які задовольняють цьому рівнянню. Легко побачити, що дитяче рівняння <span class="arithmatex">\( x + 2 = 6 \)</span> має єдиний корінь <span class="arithmatex">\( x = 4 \)</span>. Проведемо перевірку, підставивши четвірку в рівняння:</p>
 <div class="arithmatex">\[
@@ -249,52 +250,54 @@
 \]</div>
 <p>– отримано правильну рівність, отже, рішення знайдено правильно.</p>
 <p>Диференціальні рівняння влаштовані приблизно так само!</p>
-<p>Диференціальне рівняння першого порядку в загальному випадку містить:
-1) незалежну змінну <span class="arithmatex">\( x \)</span>;
-2) залежну змінну <span class="arithmatex">\( y \)</span> (функцію);
-3) першу похідну функції: <span class="arithmatex">\( y' = \frac{dy}{dx} \)</span>.</p>
-<p>В деяких рівняннях 1-го порядку може бути відсутній «ікс» або (і) «ігрек», але це не суттєво – важливо, щоб у ДУ була перша похідна <span class="arithmatex">\( y' \)</span>, і не було похідних вищих порядків – <span class="arithmatex">\( y'' \)</span>, <span class="arithmatex">\( y''' \)</span> тощо.</p>
+<p><strong>Диференціальне рівняння першого порядку</strong> в загальному випадку містить:</p>
+<p>1) незалежну змінну <span class="arithmatex">\( x \)</span>;</p>
+<p>2) залежну змінну <span class="arithmatex">\( y \)</span> (функцію);</p>
+<p>3) першу похідну функції: <span class="arithmatex">\( y' = \frac{dy}{dx} \)</span>.</p>
+<p>В деяких рівняннях 1-го порядку може бути відсутній «ікс» або (і) «ігрек», але це не суттєво – важливо, щоб у ДР була перша похідна <span class="arithmatex">\( y' \)</span>, і не було похідних вищих порядків – <span class="arithmatex">\( y'' \)</span>, <span class="arithmatex">\( y''' \)</span> тощо.</p>
 <p><strong>Що означає розв'язати диференціальне рівняння?</strong><br/>
-Розв'язати диференціальне рівняння – це означає знайти множину всіх функцій, які задовольняють даному рівнянню (втім, іноді досить і однієї). Тобто коренями диференціального рівняння є функції. Для ДУ 1-го порядку така множина функцій зазвичай має вигляд <span class="arithmatex">\(y = f(x, C)\)</span>, яку називають <strong>загальним розв'язком диференціального рівняння</strong> (де <span class="arithmatex">\(C\)</span> приймає різні дійсні значення).</p>
+Розв'язати диференціальне рівняння – це означає знайти множину всіх функцій, які задовольняють даному рівнянню (втім, іноді досить і однієї). Тобто коренями диференціального рівняння є функції. Для ДР 1-го порядку така множина функцій зазвичай має вигляд <span class="arithmatex">\(y = f(x, C)\)</span>, яку називають <strong>загальним розв'язком диференціального рівняння</strong> (де <span class="arithmatex">\(C\)</span> приймає різні дійсні значення).</p>
 <p><strong>Приклад 1</strong></p>
 <p>Розв'язати диференціальне рівняння <span class="arithmatex">\(x y' = y\)</span>.</p>
-<p>Повний комплект дій. З чого почати розв'язання?</p>
+<p>Повний комплект дій. З чого почати <strong>розв'язання</strong>?</p>
 <p>У першу чергу потрібно переписати похідну в іншому вигляді. Згадуємо громіздке позначення <span class="arithmatex">\(y' = \frac{dy}{dx}\)</span>, яке багатьом із вас напевно здавалося непотрібним і зайвим. У диференціальних рівняннях рулить саме воно!</p>
 <p>Отже:</p>
-<div class="arithmatex">\[ x \cdot \frac{dy}{dx} = y \]</div>
-<p>На другому етапі дивимося, чи можна розділити змінні? Що означає розділити змінні? Грубо кажучи, в лівій частині рівняння залишити тільки "ігрек", а в правій частині організувати тільки "ікси". Розділення змінних виконується за рахунок «шкільних» правил: винесення множників за дужки, перенос доданків із частини в частину зі зміною знака, перенос множників із частини в частину за правилом пропорції і т. п.</p>
+<p><span class="arithmatex">\( x \cdot \frac{dy}{dx} = y \)</span></p>
+<p>На другому етапі дивимося, чи можна <strong>розділити змінні</strong>? Що означає розділити змінні? Грубо кажучи, <strong>в лівій частині</strong> рівняння залишити <strong>тільки "ігрики"</strong>, а <strong>в правій частині</strong> організувати <strong>тільки "ікси"</strong>. Розділення змінних виконується за рахунок «шкільних» правил: винесення множників за дужки, перенос доданків із частини в частину зі зміною знака, перенос множників із частини в частину за правилом пропорції і т. п.</p>
 <p>Диференціали <span class="arithmatex">\(dy\)</span> і <span class="arithmatex">\(dx\)</span> – це повноправні множники й активні учасники бойових дій. У розглянутому прикладі змінні легко розділяються перекиданням множників за правилом пропорції:</p>
-<div class="arithmatex">\[\frac{dy}{y} = \frac{dx}{x}\]</div>
-<p>Змінні розділені. У лівій частині – тільки "ігрек", у правій частині – тільки "ікс".</p>
-<p>Наступний етап – інтегрування диференціального рівняння. Все просто, навішуємо інтеграли на обидві частини:</p>
-<div class="arithmatex">\[\int \frac{dy}{y} = \int \frac{dx}{x}\]</div>
+<p><span class="arithmatex">\(\frac{dy}{y} = \frac{dx}{x}\)</span></p>
+<p>Змінні розділені. У лівій частині – тільки "ігрик", у правій частині – тільки "ікс".</p>
+<p>Наступний етап – <strong>інтегрування диференціального рівняння</strong>. Все просто, навішуємо інтеграли на обидві частини:</p>
+<p><span class="arithmatex">\(\int \frac{dy}{y} = \int \frac{dx}{x}\)</span></p>
 <p>Зрозуміло, інтеграли потрібно взяти. У цьому випадку вони табличні:</p>
-<div class="arithmatex">\[\ln |y| = \ln |x| + C\]</div>
+<p><span class="arithmatex">\(\ln |y| = \ln |x| + C\)</span></p>
 <p>Як ми пам'ятаємо, до будь-якого первісного приписується константа. Тут два інтеграли, але константу <span class="arithmatex">\(C\)</span> достатньо записати один раз (тому що константа + константа все одно дорівнює константі). У більшості випадків це додавання поміщається в праву частину.</p>
-<p>Суворо кажучи, після того як взяті інтеграли, диференціальне рівняння вважається розв'язаним. Єдине, що, якщо "ігрек" не виражений через "ікс", тобто розв'язок має вигляд <span class="arithmatex">\(F(x, y) = 0\)</span>, то це ще не є загальним розв'язком диференціального рівняння. Зазвичай це рівняння виражають в явному вигляді й називають загальним інтегралом диференціального рівняння. Тобто:</p>
-<div class="arithmatex">\[\ln |y| = \ln |x| + C\]</div>
-<p>Розв'язок знайдено!</p>
-<p>Відповідь у такій формі цілком прийнятна, але хіба варіант не кращий? Давайте спробуємо отримати <strong>загальний розв'язок</strong>.</p>
+<p>Після того як взяті інтеграли, диференціальне рівняння вважається розв'язаним. Єдине, що, якщо "ігрик" не виражений через "ікс", тобто розв'язок має вигляд <span class="arithmatex">\(F(x, y) = 0\)</span>, то це ще не є загальним розв'язком диференціального рівняння. Зазвичай це рівняння виражають в явному вигляді й називають <strong>загальним інтегралом диференціального рівняння</strong>. Тобто:</p>
+<p><span class="arithmatex">\(\ln |y| = \ln |x| + C\)</span></p>
+<p>Відповідь у такій формі цілком прийнятна, але хіба немає кращого варіанту? Давайте спробуємо отримати <strong>загальний розв'язок</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Будь ласка, запам'ятайте перший технічний прийом, він дуже поширений і часто використовується в практичних завданнях: якщо після інтегрування в правій частині з'являється логарифм, то константу в багатьох випадках (але далеко не завжди!) доцільно записати також під логарифмом. І обов'язково записати, якщо в результаті вийшли тільки логарифми (як у розглянутому прикладі).</p>
+</div>
 <p>Замість запису <span class="arithmatex">\( \ln |y| = \ln |x| + C \)</span> зазвичай пишуть <span class="arithmatex">\( \ln |y| = \ln |Cx| \)</span> (і це коректно, оскільки <span class="arithmatex">\( C \)</span> з таким же успіхом приймає всі дійсні значення, що й <span class="arithmatex">\( \ln(C) \)</span>).</p>
 <p>Навіщо це потрібно? Це робиться для того, щоб легше було виразити <span class="arithmatex">\( y \)</span>. Використовуємо властивість логарифмів <span class="arithmatex">\( \ln a + \ln b = \ln ab \)</span>. У даному випадку:</p>
-<div class="arithmatex">\[
+<p><span class="arithmatex">\(
 \ln |y| = \ln |Cx|
-\]</div>
+\)</span></p>
 <p>Тепер логарифми та модулі можна прибрати:</p>
-<div class="arithmatex">\[
+<p><span class="arithmatex">\(
 y = Cx
-\]</div>
+\)</span></p>
 <p>Функція представлена у явному вигляді. Це і є загальне розв'язання.</p>
-<p>Відповідь: загальне розв'язання: <span class="arithmatex">\( y = Cx \)</span>, ду <span class="arithmatex">\(C=const\)</span>.</p>
+<p>Відповідь: загальне розв'язання: <span class="arithmatex">\( y = Cx \)</span>, ду <span class="arithmatex">\( C=const \)</span>.</p>
 <p>Відповіді багатьох диференціальних рівнянь досить легко перевірити. У нашому випадку це робиться зовсім просто: беремо знайдене розв'язання <span class="arithmatex">\( y = Cx \)</span> і диференціюємо його:</p>
-<div class="arithmatex">\[
+<p><span class="arithmatex">\(
 y' = (Cx)' = C
-\]</div>
+\)</span></p>
 <p>Після чого підставляємо <span class="arithmatex">\( y = Cx \)</span> та похідну <span class="arithmatex">\( y' = C \)</span> у вихідне рівняння <span class="arithmatex">\( xy' = y \)</span>:</p>
-<div class="arithmatex">\[
+<p><span class="arithmatex">\(
 xC = Cx
-\]</div>
+\)</span></p>
 <p>Отримано рівність, яка вірна для всіх значень <span class="arithmatex">\( x \)</span> (тотожність), отже, множина функцій <span class="arithmatex">\( y = Cx \)</span> задовольняє рівнянню <span class="arithmatex">\( xy' = y \)</span>, що і вимагалося перевірити.</p>
 <p>Надаючи константі <span class="arithmatex">\( C \)</span> різні значення, можна отримати безліч часткових розв'язань диференціального рівняння. Зрозуміло, що будь-яка з функцій <span class="arithmatex">\( y = x \)</span>, <span class="arithmatex">\( y = 2x \)</span>, <span class="arithmatex">\( y = -3x \)</span> і т. д. задовольняє диференціальному рівнянню <span class="arithmatex">\( xy' = y \)</span>.</p>
 <p>Іноді загальне розв'язання називають сімейством функцій. У даному прикладі загальне розв'язання <span class="arithmatex">\( y = Cx \)</span>, де <span class="arithmatex">\(C=const\)</span> – це сімейство лінійних функцій, а точніше, сімейство прямих пропорційностей.</p>
@@ -305,7 +308,7 @@ xC = Cx
 Ні, не завжди. Дуже легко придумати «наворочене» рівняння, яке неможливо проінтегрувати, крім того, існують такі інтеграли, які не можна обчислити. Але подібні ДР можна вирішити наближено за допомогою спеціальних методів.</p>
 <p>3) У даному прикладі ми отримали розв'язання у вигляді загального інтеграла <span class="arithmatex">\(\ln|y|=\ln|x|+\ln|C|\)</span>. Чи завжди можна з загального інтеграла знайти загальне розв'язання, тобто виразити «ігрик» у явному вигляді?*
 Ні, не завжди. Наприклад: <span class="arithmatex">\( y+\ln|y|= \arcsin x + xy^2 +C\)</span>. Ну і як тут виразити «ігрик»?! У таких випадках відповідь слід записати у вигляді загального інтеграла. Крім того, іноді загальне розв'язання можна знайти, але воно записується настільки громіздко і незручно, що краще залишити відповідь у вигляді загального інтеграла.</p>
-<p>4) ...Мабуть, поки що достатньо. У першому ж прикладі ми зіткнулися з ще одним важливим моментом, пов'язаним з перенесенням змінних у знаменник, але щоб не перевантажити «новачків» лавиною інформації, залишу його до наступного уроку.</p>
+<p>4) ...Мабуть, поки що достатньо. У першому ж прикладі ми зіткнулися <strong>з ще одним важливим моментом</strong>, пов'язаним з перенесенням змінних у знаменник, але щоб не перевантажити «новачків» лавиною інформації, залишу його до наступного уроку.</p>
 <p>Не будемо поспішати. Ще одне просте ДР і ще один типовий прийом розв'язання:</p>
 <!-- taken from
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
@@ -315,7 +318,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <!-- mkdocs-git-revision-date-localized-plugin -->
 </small>
 </div>
-
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-15, Updated 2024-08-17<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (2)</div>
 <style>
                 .share-button:hover {
                     filter: brightness(1.2);
