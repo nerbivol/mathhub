@@ -195,7 +195,7 @@ Q \cup I = \mathbb{R}
 Геометрична інтерпретація множини \( \mathbb{R} \) вам добре знайома — це числова пряма:
 
 
-<img width="250" src="https://github.com/nerbivol/mathhub/blob/math/docs/overrides/assets/images/algebra_sets_1.png?raw=true" alt="Sets">
+<img width="500" src="https://github.com/nerbivol/mathhub/blob/math/docs/overrides/assets/images/algebra_sets_1.png?raw=true" alt="Sets">
 
 Кожному дійсному числу відповідає певна точка числової прямої, і навпаки — кожній точці числової прямої обов'язково відповідає деяке дійсне число. По суті, зараз я сформулюю **властивість неперервності** дійсних чисел, яке хоч і здається очевидним, але строго доводиться в курсі математичного аналізу.
 
@@ -356,12 +356,11 @@ A \setminus B = \{b, c\}
         \( A \cup B = \{a, b, 1, 2\} \)
         
         \(A \setminus B = \{2\} \)
-        \(
-        B \setminus A = \{b\}
-        \)
-        \(
-        A \times B = \{(a, a), (a, b), (a, 1), (1, a), (1, b), (1, 1), (2, a), (2, b), (2, 1)\}
-        \)
+
+        \(B \setminus A = \{b\} \)
+
+        \( A \times B = \{(a, a), (a, b), (a, 1), (1, a), (1, b), (1, 1), (2, a), (2, b), (2, 1)\}\)
+        
         \(
         B \times A = \{(a, a), (a, 1), (a, 2), (b, a), (b, 1), (b, 2), (1, a), (1, 1), (1, 2)\}
         \)
@@ -373,15 +372,15 @@ A \setminus B = \{b, c\}
         \(
         A \cap B = \{1, 3\}
         \)
+
         \(
         A \cup B = \{-1, 0, 1, 2, 3, 5, \dots, 2n - 1, \dots\}
         \)
-        \(
-        A \setminus B = \{5, 7, 9, \dots, 2n - 1, \dots\}
-        \)
-        \(
-        B \setminus A = \{-1, 0, 2\}
-        \)
+
+        \( A \setminus B = \{5, 7, 9, \dots, 2n - 1, \dots\}\)
+
+        \( B \setminus A = \{-1, 0, 2\}\)
+
         \(
         A \times B = \left\{ 
         \begin{array}{c}
@@ -393,6 +392,7 @@ A \setminus B = \{b, c\}
         \end{array}
         \right\}
         \)
+
         \(
         B \times A = \left\{ 
         \begin{array}{c}
@@ -410,21 +410,22 @@ A \setminus B = \{b, c\}
         \(
         A \cap B = [-1; 3)
         \)
+
         \(
         A \cup B = (-\infty; +\infty)
         \)
+
         \(
         A \setminus B = (-\infty, -1)
         \)
+
         \(
         B \setminus A = [3; +\infty)
         \)
-        \(
-        A \times B = \{(x, y) \mid x < 3, y \geq -1\} \quad \text{— всі\ точки } (x, y) \text{ координатної\ площини } XOY, \text{ що задовольняють двом вказаним нерівностям.} \text{ Аналогічно:}
-        \)
-        \(
-        B \times A = \{(x, y) \mid y \geq -1, x < 3\}
-        \)
+
+        \(A \times B = \{(x, y) \mid x < 3, y \geq -1\} \quad \) - всі точки \( (x, y) \) координатної площини \( XOY\), що задовольняють двом вказаним нерівностям.  Аналогічно:
+
+        \(B \times A = \{(x, y) \mid y \geq -1, x < 3\} \)
 
 
 ### Відображення множин
