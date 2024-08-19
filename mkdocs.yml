@@ -75,7 +75,7 @@ extra: # version:
   robots: robots.txt
   analytics:
     provider: google
-    property: G-2M5EHKC0BH
+    property: G-Y3SBR6N7S8
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nerbivol
@@ -135,6 +135,8 @@ nav:
           - 🇬🇧&nbsp English: https://nerbivol.github.io/mathhub/en/
   - Диференціальні рівняння:
       - Диференціальні рівняння першого порядку: differential/first_order.md
+      - Однорідні диференціальні рівняння першого порядку: differential/homogeneous_first_order.md
+
   - Вища алгебра:
       - Множини: algebra/sets.md
 
@@ -152,9 +154,9 @@ plugins:
       add_json_ld: True
       add_share_buttons: True
       add_css: True
-#  - redirects:
-#      redirect_maps:
-#        package-framework.md: index.md
+  - redirects:
+      redirect_maps:
+        differential_first_order.md: differential/first_order.md
 #        package-framework/mock_detector.md: index.md
 #        predict.md: modes/predict.md
 #        sdk.md: index.md
