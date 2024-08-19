@@ -2,82 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nerbivol.github.io/mathhub/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nerbivol.github.io/mathhub/algebra/sets/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nerbivol.github.io/mathhub/differential/first_order/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/benchmark/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/export/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/predict/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/track/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/train/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/modes/val/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/classify/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/detect/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/obb/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/pose/</loc>
-         <lastmod>2024-08-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://nerbivol.github.io/mathhub/tasks/segment/</loc>
-         <lastmod>2024-08-17</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

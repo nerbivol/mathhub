@@ -20,7 +20,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../stylesheets/style.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2M5EHKC0BH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2M5EHKC0BH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2M5EHKC0BH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-Y3SBR6N7S8"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-Y3SBR6N7S8",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-Y3SBR6N7S8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="Диференціальні рівняння першого порядку" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Диференціальні рівняння" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="og:url"/><meta content="Диференціальні рівняння першого порядку" property="og:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="og:description"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="twitter:url"/><meta content="Диференціальні рівняння першого порядку" property="twitter:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443", "image": [], "datePublished": "2024-08-15 00:29:20 +0300", "dateModified": "2024-08-17 21:51:42 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443. \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u0438 \u0440\u043e\u0437\u0432\u2019\u044f\u0437\u0430\u043d\u043d\u044f. \u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0440\u043e\u0437\u0434\u0456\u043b\u044c\u043d\u0438\u043c\u0438 \u0437\u043c\u0456\u043d\u043d\u0438\u043c\u0438"}</script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
@@ -203,11 +203,60 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Диференціальні рівняння першого порядку
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Диференціальні рівняння першого порядку
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      Приклад 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      Приклад 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      Приклад 3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      Приклад 4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      Приклад 5
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -229,6 +278,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      Приклад 1
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      Приклад 2
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      Приклад 3
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      Приклад 4
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      Приклад 5
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -238,17 +328,16 @@
 <a class="md-content__button md-icon" href="https://github.com/nerbivol/mathhub/tree/main/docs/en/differential/first_order.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<h1 id="_1">Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними**</h1>
+<h1 id="_1">Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними</h1>
 <p>Диференціальні рівняння (ДР). Ці два слова зазвичай лякають середньостатистичну людину. Диференціальні рівняння здаються чимось надскладним і важким для освоєння навіть багатьом студентам. Ууууу... диференціальні рівняння, як би мені все це пережити?!</p>
 <p>Таке враження і такий настрій кардинально неправильні, тому що насправді ДИФЕРЕНЦІАЛЬНІ РІВНЯННЯ – ЦЕ ПРОСТО І НАВІТЬ ЗАХОПЛЮЮЧЕ. Що потрібно знати і вміти, щоб навчитися розв'язувати диференціальні рівняння? Для успішного вивчення диференціальних рівнянь ви повинні добре вміти інтегрувати і диференціювати. Чим краще вивчені теми "Похідна функції однієї змінної" і "Неозначений інтеграл", тим легше буде розібратися з диференціальними рівняннями. Скажу більше, якщо у вас більш-менш пристойні навички інтегрування, то тема практично освоєна! Чим більше інтегралів різних типів ви вмієте розв'язувати – тим краще. Чому? Доведеться багато інтегрувати. І диференціювати. Також настійно рекомендую навчитися знаходити похідну від функції, заданої неявно.</p>
 <p>У 95% випадків у контрольних роботах зустрічаються 3 типи диференціальних рівнянь першого порядку: рівняння з роздільними змінними, які ми розглянемо на цьому уроці; однорідні рівняння і лінійні неоднорідні рівняння. Тим, хто починає вивчати диференціальні рівняння, раджу ознайомитися з уроками саме в такій послідовності, причому після вивчення перших двох статей не завадить закріпити свої навички на додатковому практикумі – рівняннях, що зводяться до однорідних.</p>
 <p>Є ще більш рідкісні типи диференціальних рівнянь: рівняння у повних диференціалах, рівняння Бернуллі та деякі інші. Найважливішими з двох останніх видів є рівняння у повних диференціалах, оскільки крім цього ДУ я розглядаю новий матеріал – часткове інтегрування.</p>
 <p>Отже, орієнтири розставлено – поїхали:</p>
-<p>Спочатку згадаємо «звичайні» рівняння. Вони містять змінні та числа. Простіший приклад: <span class="arithmatex">\( x + 2 = 6 \)</span>. Що означає розв'язати таке рівняння? Це означає знайти множину всіх чисел, які задовольняють цьому рівнянню. Легко побачити, що дитяче рівняння <span class="arithmatex">\( x + 2 = 6 \)</span> має єдиний корінь <span class="arithmatex">\( x = 4 \)</span>. Проведемо перевірку, підставивши четвірку в рівняння:</p>
-<div class="arithmatex">\[
+<p>Спочатку згадаємо «звичайні» рівняння. Вони містять змінні та числа. Простіший приклад: <span class="arithmatex">\( x + 2 = 6 \)</span>. Що означає розв'язати таке рівняння? Це означає знайти множину всіх чисел, які задовольняють цьому рівнянню. Легко побачити, що дитяче рівняння <span class="arithmatex">\( x + 2 = 6 \)</span> має єдиний корінь <span class="arithmatex">\( x = 4 \)</span>. Проведемо перевірку, підставивши четвірку в рівняння:
+<span class="arithmatex">\(
 4 + 2 = 6
-\]</div>
-<p>– отримано правильну рівність, отже, рішення знайдено правильно.</p>
+\)</span> – отримано правильну рівність, отже, рішення знайдено правильно.</p>
 <p>Диференціальні рівняння влаштовані приблизно так само!</p>
 <p><strong>Диференціальне рівняння першого порядку</strong> в загальному випадку містить:</p>
 <p>1) незалежну змінну <span class="arithmatex">\( x \)</span>;</p>
@@ -257,7 +346,7 @@
 <p>В деяких рівняннях 1-го порядку може бути відсутній «ікс» або (і) «ігрек», але це не суттєво – важливо, щоб у ДР була перша похідна <span class="arithmatex">\( y' \)</span>, і не було похідних вищих порядків – <span class="arithmatex">\( y'' \)</span>, <span class="arithmatex">\( y''' \)</span> тощо.</p>
 <p><strong>Що означає розв'язати диференціальне рівняння?</strong><br/>
 Розв'язати диференціальне рівняння – це означає знайти множину всіх функцій, які задовольняють даному рівнянню (втім, іноді досить і однієї). Тобто коренями диференціального рівняння є функції. Для ДР 1-го порядку така множина функцій зазвичай має вигляд <span class="arithmatex">\(y = f(x, C)\)</span>, яку називають <strong>загальним розв'язком диференціального рівняння</strong> (де <span class="arithmatex">\(C\)</span> приймає різні дійсні значення).</p>
-<p><strong>Приклад 1</strong></p>
+<h3 id="1"><strong>Приклад 1</strong></h3>
 <p>Розв'язати диференціальне рівняння <span class="arithmatex">\(x y' = y\)</span>.</p>
 <p>Повний комплект дій. З чого почати <strong>розв'язання</strong>?</p>
 <p>У першу чергу потрібно переписати похідну в іншому вигляді. Згадуємо громіздке позначення <span class="arithmatex">\(y' = \frac{dy}{dx}\)</span>, яке багатьом із вас напевно здавалося непотрібним і зайвим. У диференціальних рівняннях рулить саме воно!</p>
@@ -310,6 +399,295 @@ xC = Cx
 Ні, не завжди. Наприклад: <span class="arithmatex">\( y+\ln|y|= \arcsin x + xy^2 +C\)</span>. Ну і як тут виразити «ігрик»?! У таких випадках відповідь слід записати у вигляді загального інтеграла. Крім того, іноді загальне розв'язання можна знайти, але воно записується настільки громіздко і незручно, що краще залишити відповідь у вигляді загального інтеграла.</p>
 <p>4) ...Мабуть, поки що достатньо. У першому ж прикладі ми зіткнулися <strong>з ще одним важливим моментом</strong>, пов'язаним з перенесенням змінних у знаменник, але щоб не перевантажити «новачків» лавиною інформації, залишу його до наступного уроку.</p>
 <p>Не будемо поспішати. Ще одне просте ДР і ще один типовий прийом розв'язання:</p>
+<h3 id="2">Приклад 2</h3>
+<p>Знайти часткове розв'язання диференціального рівняння <span class="arithmatex">\( y' = -2y \)</span>, яке задовольняє початкову умову <span class="arithmatex">\( y(0) = 2 \)</span>.</p>
+<p><strong>Розв'язання</strong>: за умовою потрібно знайти часткове розв'язання диференціального рівняння, яке задовольняє задану початкову умову. Така постановка питання називається задачею Коші.</p>
+<p>Спочатку знаходимо загальне розв'язання. У рівнянні немає змінної «ікс», але це не повинно бентежити, головне, що в ньому є перша похідна.</p>
+<p>Переписуємо похідну у потрібному вигляді:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{dx} = -2y
+\)</span></p>
+<p>Очевидно, що змінні можна розділити, хлопчики – наліво, дівчатка – направо:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{y} = -2dx
+\)</span></p>
+<p>Інтегруємо рівняння:</p>
+<p><span class="arithmatex">\(
+\int \frac{dy}{y} = \int -2dx
+\)</span></p>
+<p>Загальний інтеграл отримано. Тут константу я позначив з надрядковою зірочкою, справа в тому, що дуже скоро вона перетвориться на іншу константу.</p>
+<p>Тепер спробуємо загальний інтеграл перетворити на загальне розв'язання (виразити «ігрик» у явному вигляді). Згадуємо старе, добре, шкільне правило: <span class="arithmatex">\( ln \, a = b \implies a = e^b \)</span>. У даному випадку:</p>
+<p><span class="arithmatex">\(
+|y| = e^{-2x + C^*}
+\)</span></p>
+<p>Константа в показнику виглядає якось недоречно, тому її зазвичай спускають з небес на землю. Якщо детально, то це відбувається так. Використовуючи властивість степенів, переписуємо функцію наступним чином:</p>
+<p><span class="arithmatex">\(
+|y| = e^{-2x} \cdot e^{C^*}
+\)</span></p>
+<p>Якщо <span class="arithmatex">\( e^{C^*} \)</span> – константа, то <span class="arithmatex">\( e^{C^*} &gt; 0 \)</span> – також деяка константа, перейменуємо її через <span class="arithmatex">\( C^{**} \)</span>:</p>
+<p><span class="arithmatex">\(
+|y| = C^{**} \cdot e^{-2x}
+\)</span></p>
+<p>Після цього розкриваємо модуль:</p>
+<p><span class="arithmatex">\(
+y = \pm C^{**} \cdot e^{-2x}
+\)</span></p>
+<p>і знову перейменовуємо константу <span class="arithmatex">\( \pm C^{**} \)</span> на <span class="arithmatex">\( C \)</span>, маючи на увазі, що «це» може приймати як позитивні, так і негативні значення:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Запам'ятайте «спуск» константи – це другий технічний прийом, який часто використовують у процесі розв'язання диференціальних рівнянь. На чистовику зазвичай одразу переходять до виду <span class="arithmatex">\( y = Ce^{-2x} \)</span>, але завжди будьте готові обґрунтувати цей перехід. Точно так само як вираження модулів іноді обходять стороною.</p>
+</div>
+<p>Отже, загальний розв'язок: <span class="arithmatex">\( y = Ce^{-2x} \)</span>, де <span class="arithmatex">\( C = const \)</span>. Ось таке симпатичне сімейство експоненціальних функцій.</p>
+<p><strong>На завершальному етапі</strong> потрібно знайти часткове рішення, яке задовольняє задану початкову умову <span class="arithmatex">\(y(0) = 2\)</span>. Це теж просто.</p>
+<p><strong>У чому полягає задача?</strong> Необхідно підібрати <strong>таке</strong> значення константи <span class="arithmatex">\(C'\)</span>, щоб виконувалась умова <span class="arithmatex">\(y(0) = 2\)</span>.</p>
+<p>Оформити можна по-різному, але зрозуміліше, мабуть, буде так. У загальне рішення замість «ікса» підставляємо нуль, а замість «ігрека» — двійку:</p>
+<p><span class="arithmatex">\(
+2 = Ce^{-2 \cdot 0}
+\)</span></p>
+<p><span class="arithmatex">\(
+2 = C \cdot 1
+\)</span></p>
+<p><span class="arithmatex">\(
+C = 2
+\)</span></p>
+<p>Таким чином, <span class="arithmatex">\(C = 2\)</span>.</p>
+<p><strong>Стандартна версія оформлення:</strong></p>
+<p><span class="arithmatex">\(
+y(0) = Ce^{-2 \cdot 0} = C \cdot 1 = C = 2
+\)</span></p>
+<p>Тепер у загальне рішення <span class="arithmatex">\(y = Ce^{-2x}\)</span> підставляємо знайдене значення константи <span class="arithmatex">\(C' = 2\)</span>:</p>
+<p><span class="arithmatex">\(
+y = 2e^{-2x}
+\)</span> — це і є потрібне нам часткове рішення.</p>
+<p><strong>Відповідь</strong>: часткове рішення: <span class="arithmatex">\(y = 2e^{-2x}\)</span>.</p>
+<p><strong>Виконаємо перевірку.</strong> Перевірка часткового рішення включає в себе <strong>два етапи</strong>:</p>
+<p>Спочатку потрібно перевірити, чи дійсно знайдена функція <span class="arithmatex">\(y = 2e^{-2x}\)</span> задовольняє початкову умову <span class="arithmatex">\(y(0) = 2\)</span>? Замість «ікса» підставляємо нуль і дивимося, що вийде:</p>
+<p><span class="arithmatex">\(
+y(0) = 2e^{-2 \cdot 0} = 2 \cdot 1 = 2
+\)</span> — так, дійсно отримана двійка, отже, початкова умова виконується.</p>
+<p><strong>Другий етап</strong> вже зі знаком. Беремо отриману функцію <span class="arithmatex">\(y = 2e^{-2x}\)</span> і знаходимо похідну:</p>
+<p><span class="arithmatex">\(
+y' = (2e^{-2x})' = 2e^{-2x} \cdot (-2x)' = -4e^{-2x}
+\)</span></p>
+<p>Підставляємо <span class="arithmatex">\(y = 2e^{-2x}\)</span> і <span class="arithmatex">\(y' = -4e^{-2x}\)</span> в початкове рівняння <span class="arithmatex">\(y' = -2y\)</span>:</p>
+<p><span class="arithmatex">\(
+-4e^{-2x} = -2 \cdot 2e^{-2x}
+\)</span></p>
+<p><span class="arithmatex">\(
+-4e^{-2x} = -4e^{-2x}
+\)</span> — отримано тотожність, далі я буду називати його вірною рівністю.</p>
+<p><strong>Висновок</strong>: часткове рішення знайдено правильно.</p>
+<p>Переходимо до більш змістовних прикладів.</p>
+<h3 id="3">Приклад 3</h3>
+<p><strong>Задача:</strong> Розв’язати диференціальне рівняння <span class="arithmatex">\(y' + (2y + 1)\cot x = 0\)</span>.</p>
+<p><strong>Розв’язання:</strong> Переписуємо похідну в потрібному нам вигляді:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{dx} + (2y + 1)\cot x = 0
+\)</span></p>
+<p>Оцінюємо, чи можна розділити змінні? Можна. Переносимо другий доданок у праву частину зі зміною знака:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{dx} = -(2y + 1)\cot x
+\)</span></p>
+<p>І перекидаємо множники за правилом пропорції:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{2y + 1} = -\cot x dx
+\)</span></p>
+<p>Змінні розділені, інтегруємо обидві частини:</p>
+<p><span class="arithmatex">\(
+\int \frac{dy}{2y + 1} = -\int \cot x dx
+\)</span></p>
+<p>Повинен попередити, наближається судний день. Якщо ви погано вивчили невизначені інтеграли, пропустили мало прикладів, то діватися нікуди — доведеться їх освоювати зараз.</p>
+<p>Інтеграл лівої частини легко знайти методом підведення функції під знак диференціала, а з інтегралом від котангенса розправляємося стандартним прийомом інтегрування тригонометричних функцій:</p>
+<p><span class="arithmatex">\(
+\int \frac{dy}{2y + 1} = \frac{1}{2}\ln|2y + 1| + C
+\)</span></p>
+<p><span class="arithmatex">\(
+-\int \cot x dx = \ln |\sin x| + C
+\)</span></p>
+<p>У результаті у нас вийшли одні логарифми, і, згідно з моєю першою технічною рекомендацією, константу теж доцільно записати під логарифм.</p>
+<p>Тепер спробуємо спростити загальний інтеграл. Оскільки у нас одні логарифми, то від них цілком можна (і потрібно) позбутися. За допомогою відомих властивостей максимально «упаковуємо» логарифми. Розпишу дуже докладно:</p>
+<p><span class="arithmatex">\(
+\frac{1}{2} \ln |2y + 1| = \ln |\sin x| + \ln |C'|
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |2y + 1| = \ln |\sin x|^2 + \ln |C'|
+\)</span></p>
+<p>Упаковка завершена, щоб варварський вигляд було облагороджено:</p>
+<p><span class="arithmatex">\(
+\sqrt{|2y + 1|} = \frac{C'}{\sin x}, 
+\)</span></p>
+<p>І відразу ж приводимо загальний інтеграл до вигляду <span class="arithmatex">\(F(x,y) = C\)</span>, як тільки це можливо:</p>
+<p><span class="arithmatex">\(
+\sqrt{|2y + 1|} \cdot \sin x = C.
+\)</span></p>
+<p>Взагалі кажучи, це робити не обов'язково, але завжди приємно порадувати професора ;-)</p>
+<p>У принципі, цей шедевр можна записати у відповідь, але тут ще доцільно звести обидві частини в квадрат і переобозначити константу:</p>
+<p><strong>Відповідь:</strong> загальний інтеграл: <span class="arithmatex">\((2y + 1) \cdot \sin^2 x = C'\)</span>, де <span class="arithmatex">\(C'\)</span> — константа.</p>
+<div class="admonition info">
+<p class="admonition-title">Примітка</p>
+<p>Загальний інтеграл часто можна записати не єдиним способом. Таким чином, якщо ваш результат не збігається з іншим відомим відповіддю, то це ще не означає, що ви неправильно розв’язали рівняння.</p>
+</div>
+<p>Чи можна тут виразити «y»? Можна. Давайте виразимо загальне рішення:</p>
+<p><span class="arithmatex">\(
+(2y + 1) \cdot \sin^2 x = C' \Rightarrow 2y + 1 = \frac{C'}{\sin^2 x} \Rightarrow y = \frac{C'}{2 \sin^2 x} - \frac{1}{2}
+\)</span></p>
+<p>Звісно, отриманий результат підходить для відповіді, але зверніть увагу, що загальний інтеграл виглядає компактніше, ніж рішення, яке ми отримали. Це дійсно корисно.</p>
+<div class="admonition note">
+<p class="admonition-title">Третя технічна порада</p>
+<p>Якщо для отримання загального розв'язку потрібно виконати значну кількість дій, то в більшості випадків краще утриматися від цих дій і залишити відповідь у вигляді загального інтеграла. Це ж стосується і «поганих» дій, коли потрібно виразити обернену функцію, зводити в степінь, витягати корінь тощо. Справа в тому, що загальне рішення виглядатиме громіздко — з великими коренями, знаками <span class="arithmatex">\(\pm\)</span> та іншими математичними труднощами.</p>
+</div>
+<p>Як виконати перевірку? Перевірку можна виконати двома способами. Спосіб перший: беремо загальний розв'язок <span class="arithmatex">\(y = \frac{C'}{2 \sin^2 x} - \frac{1}{2}\)</span>, знаходимо похідну <span class="arithmatex">\(y' = \left(\frac{C'}{2 \sin^2 x} - \frac{1}{2}\right)' \)</span> і підставляємо їх в початкове рівняння <span class="arithmatex">\( y' + (2y + 1) \cot x = 0\)</span>. Спробуйте самостійно!</p>
+<p>Другий спосіб полягає в диференціюванні загального інтеграла. Це доволі легко, головне, потрібно знаходити похідну від функції, заданої неявно:</p>
+<p><span class="arithmatex">\(
+((2y + 1) \cdot \sin^2 x)' = (C')
+\)</span></p>
+<p><span class="arithmatex">\(
+(2y + 1)' \cdot \sin^2 x + (2y + 1) \cdot (\sin^2 x)' = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+2y' \cdot \sin^2 x + (2y + 1) \cdot 2 \sin x \cdot \cos x = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+\sin x \cdot y' + (2y + 1) \cdot \cos x = 0
+\)</span></p>
+<p>Ділимо кожен доданок на <span class="arithmatex">\(2 \sin x\)</span>:</p>
+<p><span class="arithmatex">\(
+y' + (2y + 1) \cot x = 0
+\)</span></p>
+<p>Отримано в точності початкове диференціальне рівняння, значить, загальний інтеграл знайдено правильно.</p>
+<h3 id="4"><strong>Приклад 4</strong></h3>
+<div class="admonition example">
+<p class="admonition-title">Приклад для самостійного розв'язання</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Завданя</label><label for="__tabbed_1_2">Розв'язок</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Знайти часткове розв'язання диференціального рівняння <span class="arithmatex">\( y \ln y + xy' = 0 \)</span>, що задовольняє початковій умові <span class="arithmatex">\( y(1) = e \)</span>. Виконати перевірку.</p>
+<p>Це приклад для самостійного розв'язання.</p>
+<p>Нагадую, що алгоритм складається з двох етапів:</p>
+<ol>
+<li>
+<p>Знаходження загального розв'язку;</p>
+</li>
+<li>
+<p>Знаходження потрібного часткового розв'язку.</p>
+</li>
+</ol>
+<p>Перевірка також проводиться у два кроки (див. приклад 2): потрібно</p>
+<ol>
+<li>
+<p>Переконатися, що знайдена функція задовольняє початковій умові;</p>
+</li>
+<li>
+<p>Перевірити, чи взагалі розв'язок задовольняє диференціальному рівнянню.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></div>
+</div>
+<p>Повне рішення та відповідь наприкінці уроку.</p>
+<h3 id="5">Приклад 5</h3>
+<p>Знайти часткове розв'язання диференціального рівняння <span class="arithmatex">\( e^{-x^2}dy - 2xdx = 0 \)</span>, що задовольняє початковій умові <span class="arithmatex">\( y(0) = \ln 2 \)</span>. Виконати перевірку.</p>
+<p><strong>Рішення:</strong> спочатку знайдемо загальне розв'язання. Це рівняння вже містить готові диференціали <span class="arithmatex">\( dy \)</span> і <span class="arithmatex">\( dx \)</span>, а отже, рішення спрощується. Розділимо змінні:</p>
+<p><span class="arithmatex">\(
+e^{-x^2}dy = 2xdx
+\)</span></p>
+<p><span class="arithmatex">\(
+dy = 2xe^{x^2}dx
+\)</span></p>
+<p>Інтегруємо рівняння:</p>
+<p><span class="arithmatex">\(
+\int e^{-x^2}dy = \int 2xe^{x^2}dx
+\)</span></p>
+<p>Інтеграл зліва — табличний, інтеграл справа — беремо методом підведення функції під знак диференціала:</p>
+<p><span class="arithmatex">\(
+\int e^{x^2}dy = \int d(e^{x^2})
+\)</span></p>
+<p><span class="arithmatex">\(
+y = \ln(e^{x^2} + C)
+\)</span></p>
+<p>Отримуємо загальний інтеграл. Чи можна вдало виразити загальний розв'язок? Можна. Навішуємо логарифми на обидві частини. Оскільки вони додатні, то знаки модуля зайві:</p>
+<p><span class="arithmatex">\(
+y = \ln(e^{x^2} + C)
+\)</span></p>
+<p>(Сподіваюсь, усім зрозуміле перетворення <span class="arithmatex">\(\ln e^y = y \ln e = y \cdot 1 = y\)</span>, такі речі треба вже знати)</p>
+<p>Отже, загальне рішення: <span class="arithmatex">\( y = \ln(e^{x^2} + C) \)</span>, де <span class="arithmatex">\( C = const \)</span>.</p>
+<p>Знайдемо часткове рішення, яке відповідає заданій початковій умові <span class="arithmatex">\( y(0) = \ln 2 \)</span>. В загальному рішенні замість «ікса» підставляємо нуль, а замість «ігрека» логарифм двох:</p>
+<p><span class="arithmatex">\(
+\ln 2 = \ln(e^0 + C)
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln 2 = \ln(1 + C) \Rightarrow C = 1
+\)</span></p>
+<p>Більш звичне оформлення:</p>
+<p><span class="arithmatex">\(
+y(0) = \ln(e^0 + C) = \ln(1 + C) = \ln 2 \Rightarrow C = 1
+\)</span></p>
+<p>Підставляємо знайдене значення константи <span class="arithmatex">\( C = 1 \)</span> в загальне рішення.</p>
+<p><strong>Відповідь:</strong> часткове рішення: <span class="arithmatex">\( y = \ln(e^{x^2} + 1) \)</span>.</p>
+<p><strong>Перевірка:</strong> Спочатку перевіримо, чи виконана початкова умова <span class="arithmatex">\( y(0) = \ln 2 \)</span>:</p>
+<p><span class="arithmatex">\(
+y(0) = \ln(e^0 + 1) = \ln(1 + 1) = \ln 2
+\)</span></p>
+<p>Все вірно.</p>
+<p>Тепер перевіримо, чи задовольняє знайдена функція <span class="arithmatex">\( y = \ln(e^{x^2} + 1) \)</span> взагалі диференціальному рівнянню. Знаходимо похідну:</p>
+<p><span class="arithmatex">\(
+y' = \left( \ln(e^{x^2} + 1) \right)' = \frac{1}{(e^{x^2} + 1)} \cdot \left( e^{x^2} \right)' = \frac{1}{(e^{x^2} + 1)} \cdot 2x e^{x^2} = \frac{2x e^{x^2}}{(e^{x^2} + 1)}
+\)</span></p>
+<p>Розглянемо вихідне рівняння:</p>
+<p><span class="arithmatex">\(
+e^{-x^2}dy - 2xdx = 0
+\)</span></p>
+<p>Воно представлено в диференціалах.</p>
+<p>Є два способи перевірки. Можна знайдену похідну виразити диференціалом <span class="arithmatex">\( dy \)</span>:</p>
+<p><span class="arithmatex">\(
+dy = \frac{2x e^{x^2}}{(e^{x^2} + 1)}dx
+\)</span></p>
+<p>Підставляємо функцію <span class="arithmatex">\( y = \ln(e^{x^2} + 1) \)</span> і отриманий диференціал <span class="arithmatex">\( dy = \frac{2x e^{x^2}dx}{(e^{x^2} + 1)} \)</span> в вихідне рівняння:</p>
+<p><span class="arithmatex">\(
+e^{-x^2} \cdot \frac{2x e^{x^2}}{(e^{x^2} + 1)}dx - 2xdx = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{2x}{e^{x^2} + 1} - 2x = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{2x}{e^{x^2} + 1} - \frac{2x(e^{x^2} + 1)}{(e^{x^2} + 1)} = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{2x - 2xe^{x^2} - 2x}{e^{x^2} + 1} = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+0 = 0
+\)</span></p>
+<p>Використовуємо основну логарифмічну тотожність <span class="arithmatex">\( e^{\ln a} = a \)</span>:</p>
+<p><span class="arithmatex">\(
+(e^{x^2} + 1) \cdot \frac{2x e^{x^2}}{(e^{x^2} + 1)} - 2x = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+2x e^{x^2} - 2x = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+2x(e^{x^2} - 1) = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+0 = 0
+\)</span></p>
+<p>Отримане вірне рівняння, таким чином, часткове рішення знайдено правильно.</p>
+<p>Другий спосіб перевірки дзеркальний і більш звичний: з рівняння <span class="arithmatex">\( e^{-x^2}dy - 2xdx = 0 \)</span> виразимо похідну, для цього розділимо всі члени на <span class="arithmatex">\( dx \)</span>:</p>
+<p><span class="arithmatex">\(
+e^{-x^2}dy = 2xdx
+\)</span></p>
+<p><span class="arithmatex">\(
+dy = \frac{2x e^{x^2}}{(e^{x^2} + 1)}dx
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{dy}{dx} = \frac{2x e^{x^2}}{(e^{x^2} + 1)}
+\)</span></p>
+<p><span class="arithmatex">\(
+0 = 0
+\)</span></p>
+<p>Таким чином, часткове рішення знайдено правильно.</p>
 <!-- taken from
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <br/>
@@ -318,7 +696,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <!-- mkdocs-git-revision-date-localized-plugin -->
 </small>
 </div>
-<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-15, Updated 2024-08-17<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (2)</div>
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-15, Updated 2024-08-17<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (2), <a href="https://github.com/nerbivol/mathhub">not.committed.yet</a> (1)</div>
 <style>
                 .share-button:hover {
                     filter: brightness(1.2);
