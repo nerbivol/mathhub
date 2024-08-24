@@ -9,7 +9,7 @@
 <meta content="nerbivol" name="author"/>
 <link href="https://nerbivol.github.io/mathhub/differential/first_order/" rel="canonical"/>
 <link href="../.." rel="prev"/>
-<link href="../../algebra/sets/" rel="next"/>
+<link href="../homogeneous_first_order/" rel="next"/>
 <link href="../../assets/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.6.0, mkdocs-material-9.5.29" name="generator"/>
 <title>Диференціальні рівняння першого порядку - mathhub</title>
@@ -22,7 +22,7 @@
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-Y3SBR6N7S8"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-Y3SBR6N7S8",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-Y3SBR6N7S8",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<meta content="Диференціальні рівняння першого порядку" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Диференціальні рівняння" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="og:url"/><meta content="Диференціальні рівняння першого порядку" property="og:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="og:description"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="twitter:url"/><meta content="Диференціальні рівняння першого порядку" property="twitter:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443", "image": [], "datePublished": "2024-08-15 00:29:20 +0300", "dateModified": "2024-08-17 21:51:42 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443. \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u0438 \u0440\u043e\u0437\u0432\u2019\u044f\u0437\u0430\u043d\u043d\u044f. \u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0440\u043e\u0437\u0434\u0456\u043b\u044c\u043d\u0438\u043c\u0438 \u0437\u043c\u0456\u043d\u043d\u0438\u043c\u0438"}</script></head>
+<meta content="Диференціальні рівняння першого порядку" name="title"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/><meta content="Диференціальні рівняння" name="keywords"/><meta content="website" property="og:type"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="og:url"/><meta content="Диференціальні рівняння першого порядку" property="og:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="og:description"/><meta content="summary_large_image" property="twitter:card"/><meta content="https://nerbivol.github.io/mathhub/differential/first_order" property="twitter:url"/><meta content="Диференціальні рівняння першого порядку" property="twitter:title"/><meta content="Диференціальні рівняння першого порядку. Приклади розв’язання. Диференціальні рівняння з роздільними змінними" property="twitter:description"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443", "image": [], "datePublished": "2024-08-15 00:29:20 +0300", "dateModified": "2024-08-19 23:20:05 +0300", "author": [{"@type": "Organization", "name": "Ultralytics", "url": "https://ultralytics.com/"}], "abstract": "\u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u043f\u0435\u0440\u0448\u043e\u0433\u043e \u043f\u043e\u0440\u044f\u0434\u043a\u0443. \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u0438 \u0440\u043e\u0437\u0432\u2019\u044f\u0437\u0430\u043d\u043d\u044f. \u0414\u0438\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0430\u043b\u044c\u043d\u0456 \u0440\u0456\u0432\u043d\u044f\u043d\u043d\u044f \u0437 \u0440\u043e\u0437\u0434\u0456\u043b\u044c\u043d\u0438\u043c\u0438 \u0437\u043c\u0456\u043d\u043d\u0438\u043c\u0438"}</script></head>
 <body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -255,8 +255,50 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      Приклад 6
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      Приклад 7
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      Приклад 8
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      Приклад 9
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      Приклад 10
+    </span>
+</a>
+</li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../homogeneous_first_order/">
+<span class="md-ellipsis">
+    Однорідні диференціальні рівняння першого порядку
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -315,6 +357,41 @@
 <a class="md-nav__link" href="#5">
 <span class="md-ellipsis">
       Приклад 5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      Приклад 6
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      Приклад 7
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      Приклад 8
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      Приклад 9
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      Приклад 10
     </span>
 </a>
 </li>
@@ -582,7 +659,80 @@ y' + (2y + 1) \cot x = 0
 </li>
 </ol>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Мета</strong>: Знайти загальне рішення.</p>
+<p><strong>Крок 1</strong>: Розділимо змінні:</p>
+<p><span class="arithmatex">\(
+\frac{x}{y} \cdot \frac{dy}{dx} = -y \ln y
+\)</span></p>
+<p>Це рівняння можна переписати так:</p>
+<p><span class="arithmatex">\(
+\frac{dy}{y \ln y} = -\frac{dx}{x}
+\)</span></p>
+<p><strong>Крок 2</strong>: Інтегруємо обидві сторони:</p>
+<p><span class="arithmatex">\(
+\int \frac{dy}{y \ln y} = -\int \frac{dx}{x}
+\)</span></p>
+<p>Інтеграл ліворуч можна розв’язати за допомогою заміни, що призведе до:</p>
+<p><span class="arithmatex">\(
+\int \frac{d(\ln y)}{\ln y} = -\int \frac{dx}{x}
+\)</span></p>
+<p>Це дає результат:</p>
+<p><span class="arithmatex">\(
+\ln |\ln y| = -\ln |x| + \ln |C|
+\)</span></p>
+<p>де <span class="arithmatex">\( C \)</span> — константа інтегрування. Спрощуємо далі:</p>
+<p><span class="arithmatex">\(
+\ln |\ln y| = \ln \left(\frac{C}{x}\right)
+\)</span></p>
+<p>Підносимо обидві сторони до степеня експоненти, щоб позбутися логарифма:</p>
+<p><span class="arithmatex">\(
+\ln y = \frac{C}{x}
+\)</span></p>
+<p>Ще раз підносимо обидві сторони до степеня експоненти:</p>
+<p><span class="arithmatex">\(
+y = e^{\frac{C}{x}} = e^{C/x}
+\)</span></p>
+<p>Таким чином, загальне рішення є:</p>
+<p><span class="arithmatex">\(
+y = e^{C/x}
+\)</span></p>
+<p><strong>Крок 3</strong>: Знайдемо часткове рішення, що задовольняє початкову умову <span class="arithmatex">\( y(1) = e \)</span>.</p>
+<p><strong>Спосіб 1</strong>:
+Підставляємо <span class="arithmatex">\( x = 1 \)</span> і <span class="arithmatex">\( y = e \)</span> в загальне рішення:</p>
+<p><span class="arithmatex">\(
+e = e^{C/1} \Rightarrow C = 1
+\)</span></p>
+<p><strong>Спосіб 2</strong>:
+Альтернативно, можна підставити <span class="arithmatex">\( y(1) = e^{C} = e \)</span>, що також дає <span class="arithmatex">\( C = 1 \)</span>.</p>
+<p><strong>Відповідь</strong>: Часткове рішення є:</p>
+<p><span class="arithmatex">\(
+y = e^{1/x}
+\)</span></p>
+<p><strong>Перевірка</strong>: Перевіримо, чи виконується початкова умова <span class="arithmatex">\( y(1) = e \)</span>:</p>
+<p><span class="arithmatex">\(
+y(1) = e^{1/1} = e
+\)</span></p>
+<p>Так, початкова умова виконується.</p>
+<p>Далі перевіряємо, чи задовольняє функція <span class="arithmatex">\( y = e^{1/x} \)</span> диференційному рівнянню. Спочатку знайдемо похідну:</p>
+<p><span class="arithmatex">\(
+y' = -\frac{1}{x^2} e^{1/x}
+\)</span></p>
+<p><strong>Крок 4</strong>: Підставляємо <span class="arithmatex">\( y = e^{1/x} \)</span> та <span class="arithmatex">\( y' \)</span> в оригінальне диференційне рівняння:</p>
+<p><span class="arithmatex">\(
+y \ln y + x y' = 0
+\)</span></p>
+<p>Підставляємо вирази:</p>
+<p><span class="arithmatex">\(
+e^{1/x} \cdot \frac{1}{x} + x \left(-\frac{1}{x^2} e^{1/x}\right) = 0
+\)</span></p>
+<p>Це спрощується до:</p>
+<p><span class="arithmatex">\(
+\frac{1}{x} e^{1/x} - \frac{1}{x} e^{1/x} = 0
+\)</span></p>
+<p>Що підтверджує правильність рішення.</p>
+<p>Таким чином, рішення є правильним.</p>
+</div>
 </div>
 </input></input></div>
 </div>
@@ -688,6 +838,309 @@ dy = \frac{2x e^{x^2}}{(e^{x^2} + 1)}dx
 0 = 0
 \)</span></p>
 <p>Таким чином, часткове рішення знайдено правильно.</p>
+<p>Другий спосіб перевірки дзеркальний і більш звичний: з рівняння <span class="arithmatex">\( e^{-x^2}dy - 2xdx = 0 \)</span> виразимо похідну, для цього розділимо всі члени на <span class="arithmatex">\( dx \)</span>:</p>
+<p><span class="arithmatex">\(
+e^{-x^2} \cdot \frac{dy}{dx} = 2x
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{dy}{dx} = 2xe^{x^2}
+\)</span></p>
+<p>Підставляємо <span class="arithmatex">\( y = \ln(e^{x^2} + 1) \)</span> з отриманою похідною <span class="arithmatex">\( y' = \frac{2xe^{x^2}}{e^{x^2} + 1} \)</span>. У результаті спрощений тотож повинен дати правильну рівність.</p>
+<h3 id="6">Приклад 6</h3>
+<div class="admonition example">
+<p class="admonition-title">Приклад для самостійного розв'язання</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Завданя</label><label for="__tabbed_2_2">Розв'язок</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Знайти загальний інтеграл рівняння <span class="arithmatex">\( \sqrt{3} + y^2 \frac{dy}{dx} + \sqrt{1-x^2}y\frac{dy}{dx} = 0 \)</span>, відповідь представити у вигляді <span class="arithmatex">\( F(x, y) = C \)</span>.</p>
+<p>Це приклад для самостійного рішення.</p>
+</div>
+<div class="tabbed-block">
+<p>Дане рівняння допускає розділення змінних. </p>
+<p><strong>Крок 1</strong>: Розділяємо змінні та інтегруємо:</p>
+<p><span class="arithmatex">\(
+\sqrt{1 - x^2} \, dy = -\sqrt{3 + y^2} \, dx
+\)</span></p>
+<p>Переписуємо рівняння:</p>
+<p><span class="arithmatex">\(
+\frac{y \, dy}{\sqrt{3 + y^2}} = -\frac{dx}{\sqrt{1 - x^2}}
+\)</span></p>
+<p><strong>Крок 2</strong>: Інтегруємо обидві сторони:</p>
+<p><span class="arithmatex">\(
+\int \frac{y \, dy}{\sqrt{3 + y^2}} = -\int \frac{dx}{\sqrt{1 - x^2}}
+\)</span></p>
+<p>Ліва частина інтегралу:</p>
+<p><span class="arithmatex">\(
+\frac{2}{3} \cdot \left(3 + y^2\right)^{3/2} = \text{арксинус}\, x + C'
+\)</span></p>
+<p>Права частина інтегралу:</p>
+<p><span class="arithmatex">\(
+2 \sqrt{1 - x^2} = C'
+\)</span></p>
+<p><strong>Відповідь</strong>: загальний інтеграл:</p>
+<p><span class="arithmatex">\(
+\text{arcsin}\, x + \sqrt{3 + y^2} = C, \, де\, C = \text{const}
+\)</span></p>
+<p><strong>Примітка</strong>: Тут також можна отримати і загальне рішення:</p>
+<p><span class="arithmatex">\(
+\sqrt{3 + y^2} = C - \text{arcsin}\, x
+\)</span></p>
+<p><span class="arithmatex">\(
+3 + y^2 = (C - \text{arcsin}\, x)^2
+\)</span></p>
+<p><span class="arithmatex">\(
+y^2 = (C - \text{arcsin}\, x)^2 - 3
+\)</span></p>
+<p><span class="arithmatex">\(
+y = \pm \sqrt{(C - \text{arcsin}\, x)^2 - 3}
+\)</span></p>
+<p><strong>Примітка</strong>: Однак, згідно з третьою технічною порадою, не варто так робити, оскільки така відповідь виглядає досить негарно.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<p><strong>Які труднощі підстерігають при рішенні диференціальних рівнянь з константою?</strong></p>
+<p>1) Розподіл змінних (особливо, «чайникам»), що перемінні можна розділити. Розглянемо умовний приклад: <span class="arithmatex">\( \sqrt{x}y - 2x \cdot y' + xy^2 + 5y^2 = 0 \)</span>. Тут потрібно провести винесення множителів за дужки: <span class="arithmatex">\( \sqrt{x}(y - 2) \cdot y' + y^2(x + 5) = 0 \)</span> і відділити корені: <span class="arithmatex">\( \sqrt{x} \cdot y - 2 \cdot y' + y^2(x + 5) = 0 \)</span>. Як діяти далі — зрозуміло.</p>
+<p>2) Складності при самому інтегруванні. Інтеграли нерідко виникають не найпростіші, і якщо є прогалини в навичках знаходження невизначеного інтегралу, то з багатьма диференціалами прийдеться туго. До того ж у складі збірників із методичок популярна думка «раз уж дифференциальное уравнение является простым, то пусть хоть интегралы будут сложнее».</p>
+<p>3) Перетворення з константами. Як вже зауважено, з константами в диференціальних рівняннях можна поводитися досить вільно, і деякі перетворення не завжди зрозумілі новачкам. Розглянемо ще один умовний приклад: <span class="arithmatex">\(\frac{1}{2} \ln|1-x|=\frac{1}{2} \ln |y^2 - 3| + C^*\)</span></p>
+<p>Ціле доцільно множити все складові на 2: <span class="arithmatex">\( \ln |2| = \ln |y^2 - 3| + 2C^{*} \)</span>. Отримана константа <span class="arithmatex">\( 2C^{*} \)</span> — це теж якась константа, яку можна позначити через <span class="arithmatex">\( C^{**} \)</span>:</p>
+<p><span class="arithmatex">\(
+\ln |2| = \ln |y^2 - 3| + C^{**}
+\)</span></p>
+<p>Так, і оскільки у нас є одна константа, напишемо:</p>
+<p><span class="arithmatex">\(
+\ln |2| = \ln |y^2 - 3| + C
+\)</span></p>
+<p>Доцільно перетворити все в другу константу: <span class="arithmatex">\( \ln |2| = \ln |y^2 - 3| + C \)</span>.</p>
+<p>Проблема в тому, що з індексами часто не заморочуються і використовують одну й ту ж букву <span class="arithmatex">\( C \)</span>. У результаті запис рішення приймає наступний вигляд:</p>
+<p><span class="arithmatex">\(
+\frac{1}{2} \ln |2| = \frac{1}{2} \ln |y^2 - 3| + \frac{1}{2}C
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |\sqrt{2}| = \frac{1}{2} \ln |y^2 - 3| + \frac{1}{2}C
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |\sqrt{2}| = \frac{1}{2} \ln |y^2 - 3| + \ln |C|
+\)</span></p>
+<p>Що за справа?! Тут же помилки! Строго кажучи – так. Однак з точки зору змісту, помилок немає, адже в результаті перетворення варіаційної константи виходить рівнозначна варіаційна константа.</p>
+<p>Інший приклад, припустімо, що в ході рішення рівняння отримано загальний інтеграл <span class="arithmatex">\(-y^3 - y - x^2 - \ln x = C\)</span>. Така відповідь виглядає некрасиво, тому у кожного доданка доцільно змінити знак: <span class="arithmatex">\(y^3 + y + x^2 + \ln x = C\)</span>. Формально тут знову помилка — справа слід було б записати <span class="arithmatex">\(- C\)</span>. Але неформально мається на увазі, що "мінус це" — це все одно константа, яка з тим же успіхом приймає на себе множину значень, і тому ставити "мінус" не має сенсу.</p>
+<p>Я буду намагатися уникати недбалого підходу, а все ж проставляти у констант різні індекси при їхньому перетворенні. Чого й вам раджу робити.</p>
+<h3 id="7">Приклад 7</h3>
+<p>Розв'язати диференціальне рівняння <span class="arithmatex">\(2(xy + y) \cdot y' + x(y^4 + 1) = 0\)</span>. Виконати перевірку.</p>
+<p><strong>Рішення</strong>: Дане рівняння допускає розподіл змінних. Розділяємо змінні:</p>
+<p><span class="arithmatex">\( 
+2(x + 1) \cdot y' = - \frac{x(y^4 + 1)}{y} 
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{2ydy}{y^4 + 1} = - \frac{x \cdot dx}{x + 1}
+\)</span></p>
+<p>Інтегруємо. У лівій частині підводимо функцію під знак диференціала, а в правій частині застосовуємо стандартний штучний прийом:</p>
+<p><span class="arithmatex">\(
+\int \frac{2y \cdot dy}{y^4 + 1} = -\int \frac{(x + 1) - 1}{(x + 1)dx}
+\)</span></p>
+<p><span class="arithmatex">\(
+\int \frac{d(y^2)}{(y^2 + 1)} = - \int \left(\frac{1 - 1}{(x + 1)dx}\right)
+\)</span></p>
+<p><span class="arithmatex">\(
+\arctan(y^2) = x - \ln |x + 1| + C
+\)</span></p>
+<p>Константу <span class="arithmatex">\(C\)</span> тут не обов'язково визначати під логарифм, оскільки нічого путнього з цього не вийде.</p>
+<p><strong>Відповідь</strong>: загальний інтеграл: <span class="arithmatex">\( \arctan(y^2) + x - \ln |x + 1| = C \)</span>, де <span class="arithmatex">\(C = const\)</span></p>
+<p>І, зрозуміло, тут НЕ ТРЕБА виражати «y» у явному вигляді, оскільки вийде треш (пригадуємо третю технічну пораду).</p>
+<p><strong>Перевірка</strong>: диференціюємо відповідь (неявну функцію):</p>
+<div class="arithmatex">\[
+(\arctan(y^2))' + x - \ln |x + 1|' = C'
+\]</div>
+<p><span class="arithmatex">\(
+\frac{1}{1 + y^4} \cdot 2y \cdot y' + 1 + 0 = 0
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{2yy'}{1 + y^4} + 1 + 0 = 0
+\)</span></p>
+<p>Позбавляємося від дробів, для цього множимо обидва доданки на <span class="arithmatex">\((1 + y^4) \cdot (x + 1)\)</span>.</p>
+<p><span class="arithmatex">\( (1 + y⁴)(x + 1) \cdot \(\frac{2yy'}{1 + y^4}\)</span> + (1 + y⁴)(x + 1) \cdot <span class="arithmatex">\(\frac{x}{x + 1}\)</span> = 0 )</p>
+<p>Отримано вихідне диференціальне рівняння, значить, загальний інтеграл знайдено правильно.</p>
+<h3 id="8">Приклад 8</h3>
+<div class="admonition example">
+<p class="admonition-title">Приклад для самостійного розв'язання</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Завданя</label><label for="__tabbed_3_2">Розв'язок</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Знайти часткове рішення диференціального рівняння:
+<span class="arithmatex">\( 2y'\sin y \cdot \cos y \cdot \sin^2 x + \cos x = 0, \quad y\left(\frac{\pi}{2}\right) = 0 \)</span></p>
+<p>Це приклад для самостійного рішення. Єдина підказка — тут вийде загальний інтеграл, і, правильно кажучи, потрібно докласти зусиль, щоб знайти не часткове рішення, а частковий інтеграл.</p>
+</div>
+<div class="tabbed-block">
+<p>Перший варіант:
+Дане диференціальне рівняння (ДР) допускає розділення змінних. Розділяємо змінні:
+<span class="arithmatex">\(
+2y' \sin y \cos y dx = - \cos x d \left( \sin^2 x \right) = - \cos x dx
+\)</span>
+<span class="arithmatex">\(
+2 \sin y \cos y dy = -\cos x dx / \sin^2 x = - \cos x dx / \sin^2 x
+\)</span></p>
+<p>Інтегруємо:
+<span class="arithmatex">\(
+\int \sin 2y dy = \int -\frac{\cos x dx}{\sin^2 x}
+\)</span></p>
+<p>Загальний інтеграл:
+<span class="arithmatex">\(
+-\frac{1}{2} \cos 2y = \frac{1}{\sin x} + C
+\)</span></p>
+<p>Знайдемо часткове рішення (частковий інтеграл), що відповідає заданій початковій умові <span class="arithmatex">\( y \left( \frac{\pi}{2} \right) = 0 \)</span>. Підставляємо в загальне рішення <span class="arithmatex">\( x = \frac{\pi}{2} \)</span> та <span class="arithmatex">\( y = 0 \)</span>:</p>
+<p><span class="arithmatex">\(
+-\frac{1}{2} = 1 + C \Rightarrow C = -\frac{3}{2}
+\)</span></p>
+<p><strong>Відповідь:</strong> частковий інтеграл:
+<span class="arithmatex">\(
+-\frac{1}{2} \cos 2y = \frac{1}{\sin x} - \frac{3}{2}
+\)</span>
+В принципі, відповідь можна попростити та отримати щось більш компактне.</p>
+<p><strong>Варіант другий</strong>:
+Інтеграл лівої частини можна взяти по-іншому:
+<span class="arithmatex">\(
+2 \left( \sin y \cos y \right) dy = 2 \left( \sin y d \left( \sin y \right) \right) = 1 - \frac{1}{2} \sin^2 y = \sin^2 y
+\)</span></p>
+<p>В результаті отримаємо наступний загальний інтеграл:
+<span class="arithmatex">\(
+\sin^2 y = \frac{1}{\sin x} + C
+\)</span></p>
+<p>Знайдемо частковий інтеграл, що відповідає умові <span class="arithmatex">\( y \left( \frac{\pi}{2} \right) = 0 \)</span>:</p>
+<p><span class="arithmatex">\(
+0 = 1 + C \Rightarrow C = -1
+\)</span></p>
+<p>Таким чином:
+<span class="arithmatex">\(
+\sin^2 y = \frac{1}{\sin x} - 1
+\)</span></p>
+<p><strong>Цей результат легко звести до 1-ої відповіді, застосуємо формулу</strong> <span class="arithmatex">\(\sin^2 \alpha = \frac{1 - \cos 2\alpha}{2}\)</span>.</p>
+<p><span class="arithmatex">\(
+\frac{1 - \cos 2y}{2} = \frac{1}{\sin x} - 1
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{1 - \cos 2y}{2} - \frac{1}{\sin x} = -1
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{-\cos 2y}{2} = \frac{1}{\sin x} - \frac{3}{2}
+\)</span></p>
+</div>
+</div>
+</input></input></div>
+</div>
+<p>Як уже зазначалося, в диференціальних рівняннях з розділенням змінних часто виникають не найпростіші інтеграли. І ось ще пара таких прикладів для самостійного рішення. Рекомендую всім проробити Приклади № 9-10, незалежно від рівня підготовки, це дозволить актуалізувати навички знаходження інтегралів або заповнити прогалини в знаннях.</p>
+<h3 id="9">Приклад 9</h3>
+<div class="admonition example">
+<p class="admonition-title">Приклад для самостійного розв'язання</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Завданя</label><label for="__tabbed_4_2">Розв'язок</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Розв'язати диференціальне рівняння:
+<span class="arithmatex">\( (1 + e^x)y dy - e^x dx = 0 \)</span></p>
+</div>
+<div class="tabbed-block">
+<p>Дане рівняння допускає розділення змінних. Розділяємо змінні та інтегруємо:</p>
+<p><span class="arithmatex">\(
+(1 + e^x)ydy = e^x dx
+\)</span></p>
+<p><span class="arithmatex">\(
+\int ye^{-y}dy = \int \frac{dx}{1 + e^x}
+\)</span></p>
+<p>Ліву частину інтегруємо по частинах:</p>
+<p><span class="arithmatex">\(
+u = y \Rightarrow du = dy
+\)</span></p>
+<p><span class="arithmatex">\(
+dv = e^{-y}dy \Rightarrow v = -e^{-y}
+\)</span></p>
+<p><span class="arithmatex">\(
+\int u dv = uv - \int v du
+\)</span></p>
+<p>У інтегралі правої частини проведемо заміну:</p>
+<p><span class="arithmatex">\(
+t = 1 + e^x, \quad e^x = t - 1
+\)</span></p>
+<p>Таким чином:</p>
+<p><span class="arithmatex">\(
+dt = e^x dx \Rightarrow dx = \frac{dt}{t - 1}
+\)</span></p>
+<p><span class="arithmatex">\(
+-\int ye^{-y} + \beta e^{-y} dy = \int \frac{dt}{(t - 1)t}
+\)</span></p>
+<p>(тут дріб розкладається методом невизначених коефіцієнтів, але вона настільки проста, що підбір коефіцієнтів можна виконати й усно)</p>
+<p><span class="arithmatex">\(
+-e^{-y}(y + 1) = \ln |t| - \ln |t - 1| + C^*
+\)</span></p>
+<p>Зворотна заміна: <span class="arithmatex">\( t = 1 + e^x \)</span></p>
+<p><span class="arithmatex">\(
+-e^{-y}(y + 1) = \ln |1 + e^x| - \ln |1 + e^x - 1| + C^*
+\)</span></p>
+<p><span class="arithmatex">\(
+-e^{-y}(y + 1) - \ln |t| + \ln |1 + e^x| = C^*
+\)</span></p>
+<p><strong>Відповідь:</strong> загальний інтеграл: <span class="arithmatex">\( -e^{-y}(y + 1) + x - \ln(1 + e^x) = C, \)</span> де <span class="arithmatex">\( C = const \)</span>.</p>
+</div>
+</div>
+</input></input></div>
+</div>
+<h3 id="10">Приклад 10</h3>
+<div class="admonition example">
+<p class="admonition-title">Приклад для самостійного розв'язання</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">Завданя</label><label for="__tabbed_5_2">Розв'язок</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Розв'язати диференціальне рівняння: <span class="arithmatex">\( y - y' = 3(1 + x^2)y' \)</span></p>
+<p>Пам'ятайте, що загальний інтеграл можна записати єдиним способом, і зовнішній вигляд відповідей може відрізнятися від зовнішнього вигляду моїх відповідей — яскравий тому приклад 8, де я додав другу відповідь через неодноразові запитання.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Приклад 10. Рішення:</strong> дане рівняння допускає розділення змінних. Розділяємо змінні та інтегруємо:
+<span class="arithmatex">\(
+y - xy' = 3 + 3x^2y'
+\)</span></p>
+<p><span class="arithmatex">\(
+3x^2y' + xy' = y - 3
+\)</span></p>
+<p><span class="arithmatex">\(
+(3x^2 + x) \frac{dy}{dx} = y - 3
+\)</span></p>
+<p><span class="arithmatex">\(
+\frac{dy}{y - 3} = \frac{dx}{x(3x + 1)}
+\)</span></p>
+<p>Методом невизначених коефіцієнтів розкладемо підінтегральну функцію в суму елементарних дробів:</p>
+<p><span class="arithmatex">\(
+\frac{A}{x} + \frac{B}{3x + 1} = \frac{1}{x(3x + 1)}
+\)</span></p>
+<p><span class="arithmatex">\(
+A(3x + 1) + Bx = 1
+\)</span></p>
+<p><span class="arithmatex">\(
+3A + B = 0 \quad \text{і} \quad A = 1
+\)</span></p>
+<p><span class="arithmatex">\(
+3 \cdot 1 + B = 0 \quad \Rightarrow \quad B = -3
+\)</span></p>
+<p><strong>Примітка</strong>: інтеграл <span class="arithmatex">\(\int \frac{dx}{3x^2 + x}\)</span> можна було також знайти методом виділення повного квадрату.</p>
+<p><span class="arithmatex">\(
+\ln |y - 3| = \int \left( \frac{1}{x} - \frac{3}{3x^2 + x} \right) dx
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |y - 3| = \int \frac{dx}{x} - \int \frac{d(3x + 1)}{3x + 1}
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |y - 3| = \ln |x| - \ln |3x + 1| + \ln |C|
+\)</span></p>
+<p><span class="arithmatex">\(
+\ln |y - 3| = \ln \left|\frac{x}{3x + 1}\right| + \ln |C|
+\)</span></p>
+<p><span class="arithmatex">\(
+y - 3 = \frac{Cx}{3x + 1}
+\)</span></p>
+<p><strong>Відповідь</strong>: загальне рішення: <span class="arithmatex">\(y = \frac{Cx}{3x + 1} + 3\)</span>, де <span class="arithmatex">\(C = const\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Наступна рекомендована стаття — <em>Однорідні диференціальні рівняння другого порядку</em>.</p>
+<p>Успішного продовження!</p>
 <!-- taken from
 https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
 <br/>
@@ -696,7 +1149,7 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
 <!-- mkdocs-git-revision-date-localized-plugin -->
 </small>
 </div>
-<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-15, Updated 2024-08-17<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (2), <a href="https://github.com/nerbivol/mathhub">not.committed.yet</a> (1)</div>
+<div class="git-info" style="font-size: 0.8em; text-align: right; margin-bottom: 10px;"><br/>Created 2024-08-15, Updated 2024-08-19<br/>Authors: <a href="https://github.com/nerbivol">nerbivol</a> (3), <a href="https://github.com/nerbivol/mathhub">not.committed.yet</a> (1)</div>
 <style>
                 .share-button:hover {
                     filter: brightness(1.2);
@@ -772,13 +1225,13 @@ https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-fil
               </div>
 </div>
 </a>
-<a aria-label="Next: Множини" class="md-footer__link md-footer__link--next" href="../../algebra/sets/">
+<a aria-label="Next: Однорідні диференціальні рівняння першого порядку" class="md-footer__link md-footer__link--next" href="../homogeneous_first_order/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Множини
+                Однорідні диференціальні рівняння першого порядку
               </div>
 </div>
 <div class="md-footer__button md-icon">
