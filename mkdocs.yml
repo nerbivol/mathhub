@@ -19,7 +19,7 @@ site_dir: "site/" # where to publish to
 # Theme customization
 theme:
   name: material
-  language: en
+  language: uk
   custom_dir: docs/overrides/
   logo: https://raw.githubusercontent.com/nerbivol/mathhub/bdf0894e4e6d82ad972da9ec094df4f779cc7436/docs/overrides/assets/logo_inver1-cropped.svg
   favicon: assets/favicon.ico
@@ -146,7 +146,7 @@ nav:
 # Plugins including 301 redirects navigation ---------------------------------------------------------------------------
 plugins:
   - search:
-      lang: en
+      lang: uk
   - ultralytics:
       add_desc: False
       add_image: True
@@ -156,7 +156,7 @@ plugins:
       add_css: True
   - redirects:
       redirect_maps:
-        differential_first_order.md: differential/first_order.md
+#        differential_first_order.md: differential/first_order.md
 #        package-framework/mock_detector.md: index.md
 #        predict.md: modes/predict.md
 #        sdk.md: index.md
