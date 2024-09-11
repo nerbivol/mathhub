@@ -136,6 +136,8 @@ nav:
   - Диференціальні рівняння:
       - Диференціальні рівняння першого порядку: differential/first_order.md
       - Однорідні диференціальні рівняння першого порядку: differential/homogeneous_first_order.md
+      - Диференціальні рівняння, що зводяться до однорідних: differential/reducible_homogeneous_first_order.md
+
 
   - Вища алгебра:
       - Множини: algebra/sets.md
